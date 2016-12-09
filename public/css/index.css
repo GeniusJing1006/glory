@@ -1,0 +1,14 @@
+body {
+  font-size: 100px;
+  color: #fff;
+  background-color: #f00;
+}
+body div {
+  color: #f00;
+  font-size: 24px;
+}
+body p {
+  background-color: #ccc;
+  font-size: 16px;
+  color: #008000;
+}
