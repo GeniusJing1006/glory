@@ -43,22 +43,22 @@ dom.addEventListener('touchend',function(e){
 		}
 	});
 
-    //创建一个xhr 实例
-    var xhr = new XMLHttpRequest();
-    //打开一个连接 请求方式，请求路径
-    xhr.open('http://127.0.0.1:9888/index');//122.10.30.153:9901
-    //发送请求
-    xhr.send();
-    //监听状态变更
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState === 200 || xhr.readyState === 4){   //这两个都代表请求完成
-            console.log('success',JSON.parse(xhr.response));
-        }
-    }
+    // //创建一个xhr 实例
+    // var xhr = new XMLHttpRequest();
+    // //打开一个连接 请求方式，请求路径
+    // xhr.open('http://127.0.0.1:9888/index');//122.10.30.153:9901
+    // //发送请求
+    // xhr.send();
+    // //监听状态变更
+    // xhr.onreadystatechange = function(){
+    //     if(xhr.readyState === 200 || xhr.readyState === 4){   //这两个都代表请求完成
+    //         console.log('success',JSON.parse(xhr.response));
+    //     }
+    // }
     
     
     $.ajax({
-        url:'http://127.0.0.1:9888/index',
+        url:'/api/index',
         type:'get',
         dataType:'json',
         success:function(result){

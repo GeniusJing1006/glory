@@ -2,6 +2,18 @@
 var path = require('path');
 //引入express依赖模块，用来启动静态服务器
 var express = require('express');
+//引入转发请求插件
+var proxy = require('http-proxy-middleware')
+
+//定义通过 /api 访问的请求,转发到指定路径
+app.use('/api',proxy({
+	target:'http://122.10.30.153:9901',
+	pathRewrite:{
+		'^/api':'/'
+	}
+}))
+//  http://127.0.0.1:9888/api/index
+//替换为 http://122.10.30.153:9901/index
 
 //实例化express
 var app = express();
@@ -18,13 +30,13 @@ app.use('/',express.static(viewsPath));//虚拟路径，物理路径
 //拼接物理路径，用来指定虚拟路径的访问（静态资源文件）
 var publicPath = path.join(__dirname,'public');
 
+//指定访问静态资源文件的路径
+app.use('/public',express.static(publicPath));
+
 //定义一个接口
 app.get('/login',function(req,res){
 	res.send('hahaha')
 });
-
-//指定访问静态资源文件的路径
-app.use('/public',express.static(publicPath));
 
 //监听端口号9999，启动服务
 app.listen(9999,function(){
