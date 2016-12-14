@@ -5,6 +5,9 @@ var express = require('express');
 //引入转发请求插件
 var proxy = require('http-proxy-middleware')
 
+//实例化express
+var app = express();
+
 //定义通过 /api 访问的请求,转发到指定路径
 app.use('/api',proxy({
 	target:'http://122.10.30.153:9901',
@@ -15,8 +18,7 @@ app.use('/api',proxy({
 //  http://127.0.0.1:9888/api/index
 //替换为 http://122.10.30.153:9901/index
 
-//实例化express
-var app = express();
+
 
 console.log(__dirname);
 console.log(__filename);
