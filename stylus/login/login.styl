@@ -28,11 +28,37 @@ body
     width 100%
     margin-top 22px
     background #fff
+.identity_cells
+    position absolute
+    right 10px
+    top 255px
+    border-radius 6px
+    background-color #a3a3a3
+    text-align center
+    color #fff
+    font-size 14px
+    z-index 50
+    .identity_cell
+        width 64px
+        height 30px
+        line-height 30px
+    .identity_under
+        border-bottom 1px solid #fff
 .form-cell
     position relative
     display flex
     height 40px
     line-height 40px
+    &:after
+        content ''
+        position absolute
+        bottom -1px
+        left 10px
+        z-index 5
+        display block
+        height 1px
+        width 95%
+        background-color #efefef
 
 .form-cell-name
     display inline-block
@@ -58,9 +84,8 @@ body
     border none
 .cell-per
     position absolute
-    top 50%
-    margin-top 15px
-    right 35px
+    top 5px
+    right 15px
     &:after
         content ''
         display block
@@ -110,16 +135,7 @@ body
     font-size 14px
     line-height 14px
 
-&:after
-    content ''
-    position absolute
-    bottom -1px
-    left 10px
-    z-index 5
-    display block
-    height 1px
-    width 95%
-    background-color #efefef
+
 .fic-box
     display flex
 .input-box
@@ -157,6 +173,9 @@ body
         span
             text-decoration underline
             color $orange
+button.submit
+    background-color $orange
+    color #fff
 .bt-reg
     padding-left 10px
     color $orange
@@ -266,6 +285,36 @@ body
              text-align center
              line-height 65px
              font-size 13px
-
+.finish_cover
+    width 100%
+    height 100%
+    background #000
+    opacity 0.2
+    z-index 5
+    position absolute
+.finish_banner
+    border none
+    height 110px
+    width 272px
+    background-color #fff
+    z-index 10
+    position absolute
+    top 50%
+    margin-top -55px
+    left 50%
+    margin-left -136px
+    border-radius 15px
+    text-align center
+    .finish_msg
+        width 100%
+        height 63px
+        line-height 63px
+        color #323232
+        border-bottom 1px solid #d6d7dc
+        font-size 14px
+    .finish_ok
+        color $orange
+        font-weight bold
+        line-height 46px
 
 

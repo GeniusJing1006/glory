@@ -17,19 +17,51 @@
         <article class="form-list">
             <section class="form-cell">
                 <span class="form-cell-name">账号：</span>
-                <input type="text" class="form-cell-input" placeholder="请输入您的手机号">
+                <input type="text" class="form-cell-input" placeholder="请输入您的手机号" id="tel">
             </section>
             <section class="form-cell">
                 <span class="form-cell-name cell-passwd">密码：</span>
-                <input type="password" class="form-cell-input" placeholder="请输入您的账号密码">
+                <input type="password" class="form-cell-input" placeholder="请输入您的账号密码" id="pwd">
             </section>
         </article>
         <div class="bt_box">
-            <button class="btn_login">登录</button>
+            <button class="btn_login" id="btnlogin">登录</button>
         </div>
         <div class="bt_box">
             <span class="bt-reg">注册</span>
             <span class="bt-passwd">忘记密码？</span>
         </div>
+        <script src="../public/js/jquery-3.1.1.min.js"></script>
+        <script>
+            /**
+            window.onload = function(){
+                var tel = document.getElementById("tel").value.trim();
+                var pwd = document.getElementById("pwd").value.trim();
+                var btnlogin = document.getElementById("btnlogin");
+                
+                btnlogin.onclick = function(){
+                    this.style.backgroundColor = "#ed692b";
+                }
+            }
+            var arr = ["",""];
+            inputFn("section:nth-child(1) input",0);
+            inputFn("section:nth-child(2) input",1);
+            function inputFn(ele,num){
+                $(ele).keyup(function(){
+                    var val = $(this).val().trim();
+                    console.log(val);
+                    arr[num] = val;
+                    inputArray();
+                });
+            }
+            function inputArray(){
+                for(var i = 0,arrayLen = array.length;i<arrayLen;i++){
+                    if(array[i] == "" || array[i] == null){
+                        $("button").removeClass("submit");
+                        return;
+                    }
+                }
+            }*/
+        </script>
 	</body>
 </html>

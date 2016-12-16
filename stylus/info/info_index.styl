@@ -1,10 +1,26 @@
+@import "../head.styl"
+
+*
+    margin 0
+    padding 0
 body
     background #efeff4
+.header_set
+    position relative
+    &:after
+        content ''
+        position absolute
+        display block
+        width 20px
+        height 40px
+        right 15px
+        background url("../../img/nav_set_icon@2x.png") no-repeat top 15px center
+        background-size 20px        
 .login_box
     position relative
     display flex
     height 95px
-    margin-top 20px
+    margin-top 10px
     padding 0 15px
     background #fff
 
@@ -18,11 +34,45 @@ body
         border-radius 50%
         background url("../../img/log in_user-head@2x.png") no-repeat center
         background-size cover
+    .logged_img
+        &:after
+            content ''
+            position absolute
+            bottom 0
+            right 0px
+            margin-top -15px
+            display block
+            width 16px
+            height 30px
+            background url("../../img/log-in_member_icon@2x.png") no-repeat right center
+            background-size 18px
 
     .login_con
         flex:1
         padding-left 80px
-        line-height 95px
+        line-height 80px
+        div
+            position relative
+            font-size 17px
+            .logged_edit
+                position absolute
+                font-size 13px
+                color #646464
+                height 20px
+                line-height 20px
+                bottom 10px
+                left 0
+                &:after
+                    content ''
+                    position absolute
+                    bottom -4px
+                    right -21px
+                    margin-top -15px
+                    display block
+                    width 16px
+                    height 30px
+                    background url("../../img/log-in_edit_icon@2x.png") no-repeat right center
+                    background-size 12px
     &:after
         content ''
         position absolute
@@ -62,12 +112,23 @@ body
     display flex
     div
         flex 1
-        border-right 1px solid #d6d7dc
         text-align center
         .zero
             font-weight bold
             font-size 20px
             margin-right 8px
+    .banner_left
+        position relative
+        &:after
+            content ''
+            position absolute
+            right 0
+            z-index 30
+            top 8px
+            display block
+            height 30px
+            width 1px
+            background-color #d6d7dc
 
 .link_cell-1
     position relative
@@ -145,6 +206,54 @@ body
         height 30px
         background url("../../img/content_list_right_icon@2x.png") no-repeat right center
         background-size 50%
+
+.bottom-cells
+    width 100%
+    height 55px
+    background-color #fff
+    position fixed
+    bottom 0
+    margin 0
+    padding 0
+    list-style none
+    display flex
+    font-size 14px
+    .bottom-cell
+        flex 1
+        width 20%
+        text-align center
+        color #b4b4b4
+        position relative
+        .bottom-text
+            line-height 90px
+        .bottom-super
+            width 15px
+            height 15px
+            border-radius 60%
+            font-size 10px
+            background-color #ec461f
+            position absolute
+            top 6px
+            right 30%
+            line-height 15px
+            color #fff
+            text-align center
+    .bottom-index
+        background url("../../img/bottom_nor_icon04@2x.png") no-repeat top 10px center
+        background-size 25px
+    .bottom-pre
+        background url("../../img/bottom_nor_icon03@2x.png") no-repeat top 10px center
+        background-size 25px
+    .bottom-more
+        background url("../../img/bottom_icon05@2x.png") no-repeat center
+        background-size 45px 37px
+    .bottom-info
+        background url("../../img/bottom_nor_icon02@2x.png") no-repeat top 10px center
+        background-size 25px
+    .bottom-me
+        background url("../../img/bottom_press_icon01@2x.png") no-repeat top 10px center
+        background-size 25px
+
         
 
 
