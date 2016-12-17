@@ -27,6 +27,9 @@ body {
   line-height: 50px;
   text-align: center;
 }
+.header .title_center {
+  padding-right: 0;
+}
 .header .header_cancle {
   line-height: 50px;
   margin-left: 12px;
@@ -41,7 +44,47 @@ body {
   height: 109px;
   background-color: #fff;
   border-radius: 20px;
-  z-index: 30;
+  z-index: 15;
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+  top: 50%;
+  margin-top: -100px;
+}
+.order_out .make_msg {
+  height: 64px;
+  width: 100%;
+  line-height: 64px;
+  text-align: center;
+  border-bottom: 1px solid #d6d7dc;
+  color: #323232;
+  font-size: 14px;
+}
+.order_out .make_sure {
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  color: #ea5404;
+}
+.order_out .order_choose {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  display: flex;
+  text-align: center;
+}
+.order_out .order_choose .order_no {
+  flex: 1;
+  color: #646464;
+  border-right: 1px solid #d6d7dc;
+}
+.order_out .order_choose .order_sure {
+  flex: 1;
+  color: #ea5404;
+}
+* {
+  padding: 0;
+  margin: 0;
 }
 .order_label {
   width: 100%;
@@ -281,4 +324,179 @@ body {
 }
 .order_update span {
   margin-right: 10px;
+}
+.upload_banner {
+  width: 100%;
+}
+.upload_banner .upload_text {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 13px;
+  color: #b8b8b9;
+}
+.upload_banner .upload_cell {
+  width: 100%;
+  padding: 13px 0;
+  color: #fff;
+  text-align: center;
+  line-height: 195px;
+}
+.upload_banner .upload_cell .contract {
+  width: 220px;
+  height: 144px;
+  background: #878787;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.upload_banner .upload_cell .contract_img {
+  width: 220px;
+  height: 310px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.upload_banner .upload_add {
+  position: relative;
+}
+.upload_banner .upload_add:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  top: 45px;
+  background: url("../../img/content_icon_plus@2x.png") no-repeat center;
+  background-size: 100%;
+}
+.subscribe_cell {
+  width: 100%;
+  height: 116px;
+  background: #fff;
+  margin-top: 10px;
+  border-bottom: 1px solid #d6d7dc;
+  display: flex;
+  position: relative;
+  color: #646464;
+}
+.subscribe_cell .house_img {
+  flex: 1;
+  width: 100px;
+  height: 70px;
+  background: url("../../img/content_img@2x.png") no-repeat left center;
+  background-size: 100%;
+  margin-left: 12px;
+  margin-top: 12px;
+}
+.subscribe_cell .house_info {
+  flex: 2;
+  padding: 12px;
+  position: relative;
+}
+.subscribe_cell .house_info .house_top {
+  display: flex;
+  padding-bottom: 3px;
+}
+.subscribe_cell .house_info .house_top .house_title {
+  flex: 1;
+  font-size: 13px;
+}
+.subscribe_cell .house_info .house_top .house_date {
+  flex: 1;
+  text-align: right;
+  position: relative;
+  font-size: 12px;
+  color: #b4b4b4;
+}
+.subscribe_cell .house_info .house_top .house_date:before,
+.subscribe_cell .house_info .house_top .house_dateafter {
+  content: '';
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  right: 73px;
+  background: url("../../img/content_icon@2x.png") no-repeat center;
+  background-size: 100%;
+}
+.subscribe_cell .house_info .house_tro {
+  font-size: 13px;
+  line-height: 18px;
+  text-indent: 1em;
+}
+.subscribe_cell .house_info .house_time {
+  font-size: 12px;
+  color: #ff8a00;
+}
+.subscribe_cell .house_info .btn_receive {
+  height: 22px;
+  width: 54px;
+  background: #ea5404;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  right: 12px;
+  bottom: 12px;
+  position: absolute;
+}
+.subscribe_cell .house_info .house_received {
+  font-size: 12px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+.bottom-cells {
+  width: 100%;
+  height: 55px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  font-size: 14px;
+}
+.bottom-cells .bottom-cell {
+  flex: 1;
+  width: 20%;
+  text-align: center;
+  color: #b4b4b4;
+  position: relative;
+}
+.bottom-cells .bottom-cell .bottom-text {
+  line-height: 90px;
+}
+.bottom-cells .bottom-cell .bottom-super {
+  width: 15px;
+  height: 15px;
+  border-radius: 60%;
+  font-size: 10px;
+  background-color: #ec461f;
+  position: absolute;
+  top: 6px;
+  right: 30%;
+  line-height: 15px;
+  color: #fff;
+  text-align: center;
+}
+.bottom-cells .bottom-index {
+  background: url("../../img/bottom_nor_icon04@2x.png") no-repeat top 10px center;
+  background-size: 25px;
+}
+.bottom-cells .bottom-pre {
+  background: url("../../img/bottom_press_icon03@2x.png") no-repeat top 10px center;
+  background-size: 25px;
+}
+.bottom-cells .bottom-more {
+  background: url("../../img/bottom_icon05@2x.png") no-repeat center;
+  background-size: 45px 37px;
+}
+.bottom-cells .bottom-info {
+  background: url("../../img/bottom_nor_icon02@2x.png") no-repeat top 10px center;
+  background-size: 25px;
+}
+.bottom-cells .bottom-me {
+  background: url("../../img/bottom_nor_icon01@2x.png") no-repeat top 10px center;
+  background-size: 25px;
 }
