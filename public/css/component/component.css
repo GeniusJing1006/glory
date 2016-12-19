@@ -39,6 +39,13 @@ body {
   margin-right: 15px;
   color: #ea5404;
 }
+.cover {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  position: fixed;
+  z-index: 10;
+}
 .radio_box {
   padding-left: 10px;
   padding-bottom: 10px;
@@ -111,7 +118,6 @@ body {
   transform: rotate(45deg);
 }
 .select_box .select-list {
-  display: none;
   position: absolute;
   top: 38px;
   right: 0;
@@ -173,7 +179,7 @@ body {
   text-align: center;
   position: relative;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: auto;
 }
 .search_box .house_add:before {
   content: '';
@@ -235,7 +241,7 @@ body {
   flex: 5;
   display: inline-block;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: auto;
   border-bottom: 1px solid #d6d7dc;
   color: #b4b4b4;
 }
@@ -253,18 +259,12 @@ body {
   color: #bababa;
   font-size: 14px;
   margin-left: 12px;
+  position: relative;
 }
 .resource_info .resource_cells .resource_cell {
   margin: 6px 0;
   white-space: nowrap;
   overflow: hidden;
-}
-.resource_info .resource_cells .resource_cell input {
-  margin: 0 14px;
-  border: 1px solid #e1e1e1;
-  border-radius: 3px;
-  height: 30px;
-  background-color: #efeff4;
 }
 .resource_info .resource_cells .resource_cell .cell_info {
   float: left;
@@ -282,16 +282,27 @@ body {
   overflow: hidden;
 }
 .resource_info .resource_cells .resource_cell .cell_short {
+  margin: 0 14px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  height: 30px;
+  background-color: #efeff4;
   width: 33%;
 }
 .resource_info .resource_cells .resource_cell .cell_long {
+  margin: 0 14px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  height: 30px;
+  background-color: #efeff4;
   width: 70%;
 }
 .resource_info .resource_cells .resource_cell .cell_time {
+  margin-left: 14px;
   margin-right: 4%;
 }
 .resource_info .resource_cells .resource_cell .cell_time2 {
-  margin-left: -1px;
+  margin-left: -9px;
 }
 .resource_info .resource_cells .resource_cell .res_msg {
   margin-top: 3px;
@@ -311,6 +322,8 @@ body {
 }
 .resource_info .resource_cells .resource_cell .res_list {
   position: relative;
+  line-height: 30px;
+  text-indent: 6px;
 }
 .resource_info .resource_cells .resource_cell .res_list:after {
   content: '';
@@ -323,13 +336,50 @@ body {
   background: url("../../img/content_list_icon07@2x.png") no-repeat center;
   background-size: 100%;
 }
+.resource_info .resource_cells .resource_cell .resource_list {
+  list-style: none;
+  display: none;
+  position: absolute;
+  z-index: 20;
+  border: 1px solid #d6d7dc;
+  margin: 0;
+  padding: 0;
+  background-color: #efeff4;
+  border-radius: 0 0 5px 5px;
+  width: 70%;
+  left: 70px;
+  top: 110px;
+}
+.resource_info .resource_cells .resource_cell .resource_list .resource_li {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  color: #323232;
+  position: relative;
+}
+.resource_info .resource_cells .resource_cell .resource_list .resource_li:after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #d6d7dc;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+}
+.resource_info .resource_cells .resource_cell .resource_list .resource_li:last-child:after {
+  display: none;
+}
 .resource_info .resource_cells .res_txt {
   color: #646464;
 }
 .resource_info .resource_cells .res_txt sup {
   font-size: 8px;
 }
-.resource_info .resource_cells .res_add {
+.resource_info .resource_cells .add_house {
+  display: flex;
+}
+.resource_info .resource_cells .add_house .res_add {
   width: 75px;
   height: 75px;
   background-color: #d4d4d9;
@@ -339,9 +389,10 @@ body {
   text-align: center;
   line-height: 105px;
   position: relative;
-  margin: 15px;
+  margin: 15px 0;
 }
-.resource_info .resource_cells .res_add:after {
+.resource_info .resource_cells .add_house .res_add margin,
+.resource_info .resource_cells .add_house .res_add:after {
   content: '';
   position: absolute;
   width: 20px;
@@ -351,6 +402,26 @@ body {
   top: 20px;
   background: url("../../img/content_plus_icon@2x.png") no-repeat center;
   background-size: 100%;
+}
+.resource_info .resource_cells .add_house .res_img {
+  width: 75px;
+  height: 75px;
+  background: url("../../img/banner_img@2x.png") no-repeat center;
+  background-size: 75px 75px;
+  margin: 15px;
+  position: relative;
+}
+.resource_info .resource_cells .add_house .res_img:after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -7px;
+  background: url("../../img/content_img_close_icon@2x.png") no-repeat center;
+  background-size: 100%;
+}
+.resource_info .resource_cells .add_house .res_li {
+  flex: 1;
 }
 .footer {
   width: 100%;
