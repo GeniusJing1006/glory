@@ -68,3 +68,4 @@ dom.addEventListener('touchend',function(e){
             console.log('res',res)
         }
     })
+	

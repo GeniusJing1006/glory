@@ -7,3 +7,15 @@ $('.bt-passwd').on('tap',function(){
 $('.icon-back').on('tap',function(){
     location.href = '../loading.html'
 })
+
+
+function regLogin(){
+    var tel = $('#tel').val();
+    var pwd = $('#password').val();
+    var regTel = /^\d{11}$/;
+    if(tel !='' && regTel.test(tel) && pwd.length>=6){
+        $('#btnlogin').on('tap',function(){
+            location.href = '../index/index.html'
+        }).css('background','#ea5404')
+    }
+}
