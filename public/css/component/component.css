@@ -2,10 +2,10 @@ body {
   background-color: #efeff4;
 }
 .cover {
-  position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.3);
+  position: fixed;
   z-index: 10;
 }
 .header {
@@ -39,12 +39,48 @@ body {
   margin-right: 15px;
   color: #ea5404;
 }
-.cover {
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.3);
+.order_out {
+  width: 270px;
+  height: 109px;
+  background-color: #fff;
+  border-radius: 15px;
+  z-index: 15;
   position: fixed;
-  z-index: 10;
+  left: 50%;
+  margin-left: -135px;
+  top: 50%;
+  margin-top: -100px;
+}
+.order_out .make_msg {
+  height: 64px;
+  width: 100%;
+  line-height: 64px;
+  text-align: center;
+  border-bottom: 1px solid #d6d7dc;
+  color: #323232;
+  font-size: 14px;
+}
+.order_out .make_sure {
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  color: #ea5404;
+}
+.order_out .order_choose {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  display: flex;
+  text-align: center;
+}
+.order_out .order_choose .order_no {
+  flex: 1;
+  color: #646464;
+  border-right: 1px solid #d6d7dc;
+}
+.order_out .order_choose .order_sure {
+  flex: 1;
+  color: #ea5404;
 }
 .radio_box {
   padding-left: 10px;
@@ -298,16 +334,15 @@ body {
   width: 70%;
 }
 .resource_info .resource_cells .resource_cell .cell_time {
-  margin-left: 14px;
-  margin-right: 4%;
+  margin-right: 0;
 }
 .resource_info .resource_cells .resource_cell .cell_time2 {
-  margin-left: -9px;
+  margin-left: 4%;
 }
 .resource_info .resource_cells .resource_cell .res_msg {
   margin-top: 3px;
   display: block;
-  vetical-align: top;
+  vertical-align: top;
   float: left;
 }
 .resource_info .resource_cells .resource_cell .res_tro {
@@ -376,34 +411,35 @@ body {
 .resource_info .resource_cells .res_txt sup {
   font-size: 8px;
 }
-.resource_info .resource_cells .add_house {
-  display: flex;
-}
-.resource_info .resource_cells .add_house .res_add {
+.resource_info .add_house {
   width: 75px;
   height: 75px;
   background-color: #d4d4d9;
-  border-radius: 1px;
-  color: #767677;
-  font-size: 13px;
   text-align: center;
-  line-height: 105px;
+  margin-top: 23px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.resource_info .add_house .add_res {
+  padding-top: 20px;
   position: relative;
-  margin: 15px 0;
 }
-.resource_info .resource_cells .add_house .res_add margin,
-.resource_info .resource_cells .add_house .res_add:after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 50%;
-  margin-left: -10px;
-  top: 20px;
+.resource_info .add_house .add_res .add-img {
+  width: 24px;
+  height: 24px;
+  display: block;
   background: url("../../img/content_plus_icon@2x.png") no-repeat center;
-  background-size: 100%;
+  margin-left: 24px;
 }
-.resource_info .resource_cells .add_house .res_img {
+.resource_info .add_house .add_res .file {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.resource_info .add_house .add_res .res_img {
   width: 75px;
   height: 75px;
   background: url("../../img/banner_img@2x.png") no-repeat center;
@@ -411,7 +447,7 @@ body {
   margin: 15px;
   position: relative;
 }
-.resource_info .resource_cells .add_house .res_img:after {
+.resource_info .add_house .add_res .res_img:after {
   content: '';
   width: 16px;
   height: 16px;
@@ -420,7 +456,7 @@ body {
   background: url("../../img/content_img_close_icon@2x.png") no-repeat center;
   background-size: 100%;
 }
-.resource_info .resource_cells .add_house .res_li {
+.resource_info .add_house .add_res .res_li {
   flex: 1;
 }
 .footer {
@@ -443,4 +479,45 @@ body {
   line-height: 40px;
   background-color: #ea5404;
   border: none;
+}
+.demand_banner {
+  width: 100%;
+}
+.demand_banner .demand_input {
+  width: 85.3%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #d6d7dc;
+  margin-left: 7.35%;
+  margin-top: 10px;
+}
+.demand_banner .demand_info {
+  width: 80.5%;
+  height: 210px;
+  resize: none;
+  border-radius: 5px;
+  border: 1px solid #ea5404;
+  margin-left: 7.35%;
+  margin-top: 10px;
+  color: #b4b4b4;
+  font-size: 14px;
+  padding: 10px;
+}
+.demand_banner .demand_add {
+  width: 93.3%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #d6d7dc;
+  margin-left: 3.35%;
+  margin-top: 10px;
+}
+.demand_banner .demand_push {
+  width: 93.3%;
+  height: 44px;
+  margin-left: 3.35%;
+  margin-top: 23px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #ea5404;
+  border: 1px solid #d6d7dc;
 }

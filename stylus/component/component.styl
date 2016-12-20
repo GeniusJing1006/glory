@@ -1,11 +1,6 @@
 @import '../component_head.styl'
 
-.cover
-    width 100%
-    height 100%
-    background rgba(0,0,0,0.3)
-    position fixed
-    z-index 10
+
 .radio_box
     padding-left 10px
     padding-bottom 10px
@@ -187,6 +182,7 @@
     color #727272
     background-color #fff
     border-bottom 1px solid #d6d7dc
+    
     .edifice_title
         .log
             background #49cde9
@@ -227,14 +223,14 @@
                 background-color #efeff4
                 width 70%
             .cell_time
-                margin-left 14px
-                margin-right 4%
+                margin-right 0
+                
             .cell_time2
-                margin-left -9px
+                margin-left 4%
             .res_msg
                 margin-top 3px
                 display block
-                vetical-align top
+                vertical-align top
                 float left
             .res_tro
                 margin 0 14px
@@ -295,30 +291,31 @@
             color #646464
             sup
                 font-size 8px
-        .add_house
-            display flex
-            .res_add
-                width 75px
-                height 75px
-                background-color #d4d4d9
-                border-radius 1px
-                color #767677
-                font-size 13px
-                text-align center
-                line-height 105px
-                position relative
-                margin 15px 0
-                margin
-                &:after
-                    content ''
-                    position absolute
-                    width 20px
-                    height 20px
-                    left 50%
-                    margin-left -10px
-                    top 20px
-                    background url("../../img/content_plus_icon@2x.png") no-repeat center
-                    background-size 100%
+    .add_house
+        width 75px
+        height 75px
+        background-color #d4d4d9
+        text-align center
+        margin-top 23px
+        margin-left 20px
+        margin-bottom 15px
+        font-size 13px
+        .add_res
+            padding-top 20px
+            position relative
+            .add-img
+                width 24px
+                height 24px
+                display block
+                background url(../../img/content_plus_icon@2x.png) no-repeat center
+                margin-left 24px
+            .file
+                position absolute
+                top 50%
+                left 0
+                width 100%
+                opacity 0
+            
             .res_img
                 width 75px
                 height 75px
@@ -336,8 +333,8 @@
                     background-size 100%
             .res_li
                 flex 1
-        
-        
+    
+   
 .footer
     width 100%
     height 61px
@@ -357,4 +354,41 @@
         line-height 40px
         background-color #ea5404
         border none
-        
+
+.demand_banner
+    width 100%
+    .demand_input
+        width 85.3%
+        height 45px
+        border-radius 5px
+        border 1px solid #d6d7dc
+        margin-left 7.35%
+        margin-top 10px
+    .demand_info
+        width 80.5%
+        height 210px
+        resize none
+        border-radius 5px
+        border 1px solid #ea5404
+        margin-left 7.35%
+        margin-top 10px
+        color #b4b4b4
+        font-size 14px
+        padding 10px
+    .demand_add
+        width 93.3%
+        height 40px
+        border-radius 5px
+        border 1px solid #d6d7dc
+        margin-left 3.35%
+        margin-top 10px
+    .demand_push
+        width 93.3%
+        height 44px
+        margin-left 3.35%
+        margin-top 23px
+        background-color #fff
+        border-radius 5px   
+        color #ea5404     
+        border 1px solid #d6d7dc
+

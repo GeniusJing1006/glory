@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../public/css/component/component.css">
 	</head>
 	<body>
+        <div class="cover"></div>
 		<header class="header">
             <span class="header_cancle">取消</span>
             <span class="header_title">发布房源</span>
@@ -81,6 +82,13 @@
                 <div class="resource_cell">
                     <div class="cell_info">交付状态</div>
                     <div class="cell_list res_list" data-val="1">标准交付</div>
+                    <ul class="resource_list">
+                        <li class="resource_li" data-val="1">毛坯交付</li>
+                        <li class="resource_li" data-val="2">标注交付</li>
+                        <li class="resource_li" data-val="3">简装</li>
+                        <li class="resource_li" data-val="4">精装</li>
+                        <li class="resource_li" data-val="5">豪装</li>
+                    </ul>
                 </div>
                 <div class="resource_cell res_radio">
                     交付日期<input type="text" placeholder=" 2015/06/21" class="cell_short">
@@ -89,11 +97,11 @@
                 <div class="resource_cell">
                     最短租期<input type="text" placeholder=" 3年" class="cell_long">
                 </div>
-                <div class="resource_cell res_radio2">
+                <div class="resource_cell">
                     付款方式<input type="text" placeholder=" 押一付三" class="cell_short">
                     <div class="radio_block radio_res"><span class="radio_btn"><i class="icon">&nbsp;</i></span><span>是否含发票</span></div>
                 </div>
-                <div class="resource_cell res_radio3">
+                <div class="resource_cell">
                     是否结佣<input type="text" placeholder=" 一个月" class="cell_short">
                     <div class="radio_block radio_res"><span class="radio_btn"><i class="icon">&nbsp;</i></span><span>是</span></div>
                 </div>
@@ -101,7 +109,8 @@
                     装修免期<input type="text" placeholder=" 一个月" class="cell_long">
                 </div>
                 <div class="resource_cell">
-                    看房时间<input type="text" placeholder=" 8:00" class="cell_short cell_time"><input type="text" placeholder=" 20:00" class="cell_short cell_time2">
+                    看房时间<input type="text" placeholder=" 8:00" class="cell_short cell_time">
+                    <input type="text" placeholder=" 20:00" class="cell_short cell_time2">
                 </div>
                 <div class="resource_cell">
                     <span class="res_msg">看房简介</span><textarea class="res_tro"> 房源简介</textarea>
@@ -117,6 +126,13 @@
         </div>
         <div class="footer">
             <div class="btn_res">确认发布</div>
+        </div>
+        <div class="order_out">
+            <div class="make_msg">您确定要退出此次发布？</div>
+            <div class="order_choose">
+                <div class="order_no">取消</div>
+                <div class="order_sure">确认</div>
+            </div>
         </div>
 	</body>
     <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
