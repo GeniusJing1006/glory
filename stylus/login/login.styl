@@ -29,9 +29,10 @@ body
     margin-top 22px
     background #fff
 .identity_cells
+    display none
     position absolute
     right 10px
-    top 255px
+    top 30px
     border-radius 6px
     background-color #a3a3a3
     text-align center
@@ -82,6 +83,7 @@ body
 .form-cell-input
     flex 1
     border none
+    color #b4b4b4
 .cell-per
     position absolute
     top 5px
@@ -94,10 +96,9 @@ body
         background url("../../img/content_icon02_nor@2x.png") no-repeat right center
         background-size 80%
 .btn_pin
-    width 85px
     height 28px
     margin 0
-    padding 0
+    padding 0 10px
     border none
     line-height 25px
     font-size 13px
@@ -141,7 +142,16 @@ body
 .input-box
     display block
     flex 1
-
+.bt_span
+    width 100%
+    margin-top 12px
+    .btn_reg
+        width 100%
+        font-size 13px
+        text-align center
+        span
+            text-decoration underline
+            color $orange
 .bt_box
     display flex
     height 40px
@@ -167,12 +177,7 @@ body
         color #fff
         font-size 1.1rem
         line-height 40px
-    .btn_reg
-        font-size 13px
-        margin 0 auto
-        span
-            text-decoration underline
-            color $orange
+    
 button.submit
     background-color $orange
     color #fff

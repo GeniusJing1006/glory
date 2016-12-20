@@ -9,7 +9,7 @@ $('.icon-back').on('tap',function(){
 })
 
 
-function regLogin(){
+$(window).on('keyup',function(){
     var tel = $('#tel').val();
     var pwd = $('#password').val();
     var regTel = /^\d{11}$/;
@@ -18,4 +18,4 @@ function regLogin(){
             location.href = '../index/index.html'
         }).css('background','#ea5404')
     }
-}
+})

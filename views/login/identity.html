@@ -52,8 +52,10 @@
             <span class="btn_reg">注册即代表同意<span>《小辉煌用户协议》</span></span>
         </div>
 	</body>
-    <!--
+    <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="../public/libs/zepto/touch.js"></script>
     <script>
+    /**
         function send(t){
             document.myform.phone.disabled = true;
             for(var i = 0;i<=t;i++){
@@ -68,6 +70,9 @@
                 var sec = t-num;
                 document.myform.phone.value = ""+sec+"秒";
             }
-        }
-    </script>-->
+        }*/
+        $('.icon-back').on('tap',function(){
+            location.href = './login.html'
+        })
+    </script>
 </html>

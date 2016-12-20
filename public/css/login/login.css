@@ -33,9 +33,10 @@ body {
   background: #fff;
 }
 .identity_cells {
+  display: none;
   position: absolute;
   right: 10px;
-  top: 255px;
+  top: 30px;
   border-radius: 6px;
   background-color: #a3a3a3;
   text-align: center;
@@ -94,6 +95,7 @@ body {
 .form-cell-input {
   flex: 1;
   border: none;
+  color: #b4b4b4;
 }
 .cell-per {
   position: absolute;
@@ -109,10 +111,9 @@ body {
   background-size: 80%;
 }
 .btn_pin {
-  width: 85px;
   height: 28px;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   border: none;
   line-height: 25px;
   font-size: 13px;
@@ -160,6 +161,19 @@ body {
   display: block;
   flex: 1;
 }
+.bt_span {
+  width: 100%;
+  margin-top: 12px;
+}
+.bt_span .btn_reg {
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+}
+.bt_span .btn_reg span {
+  text-decoration: underline;
+  color: #ed692b;
+}
 .bt_box {
   display: flex;
   height: 40px;
@@ -187,14 +201,6 @@ body {
   color: #fff;
   font-size: 1.1rem;
   line-height: 40px;
-}
-.bt_box .btn_reg {
-  font-size: 13px;
-  margin: 0 auto;
-}
-.bt_box .btn_reg span {
-  text-decoration: underline;
-  color: #ed692b;
 }
 button.submit {
   background-color: #ed692b;
