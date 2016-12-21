@@ -156,6 +156,50 @@ p
         height 50px
         background url("../../img/content_icon01_nor@2x.png") no-repeat top 10px center
         background-size 20px
+    .asc_price
+        width 50px
+        height 50px
+        background url("../../img/content_icon01_litre@2x.png") no-repeat top 10px center
+        background-size 20px
+    .desc_price
+        width 50px
+        height 50px
+        background url("../../img/content_icon01_down@2x.png") no-repeat top 10px center
+        background-size 20px
+.price_info
+    width 100%
+    height 50px
+    position relative
+    .asc_info
+        width 104px
+        height 24px
+        line-height 24px
+        text-align center
+        position absolute
+        top 7px
+        left 50%
+        margin-left -52px
+        font-size 12px
+        border-radius 20px
+        background-color rgba(0,0,0,0.7)
+        color #fff
+    .desc_info
+        width 104px
+        height 24px
+        line-height 24px
+        text-align center
+        position absolute
+        top 7px
+        left 50%
+        margin-left -52px
+        font-size 12px
+        border-radius 20px
+        background-color rgba(0,0,0,0.7)
+        color #fff
+.price_none
+    display none
+.price-info
+    display none
 .query_up
     margin-top 0
 .block_box
@@ -169,7 +213,20 @@ p
 
 .down-box
     display none
-
+    position absolute
+    z-index 20
+.down_area
+    width 100%
+    height 421px
+    /**
+    .area
+        width 50%
+        float left
+        background-color #f0f0f0
+    .street
+        width 50%
+        float right
+        background-color #fff*/
 .block_box
     display flex
     width 100%
@@ -190,9 +247,7 @@ p
         margin 5px 10px
         font-size 18px
         position relative
-    .index_img
-        &:after
-            content ''
+        .index_img
             position absolute
             top 50%
             right 10px
@@ -200,6 +255,15 @@ p
             width 16px
             height 30px
             background url("../../img/collect_icon_nor@2x.png") no-repeat center
+            background-size 100%
+        .index_collect
+            position absolute
+            top 50%
+            right 10px
+            margin-top -15px
+            width 16px
+            height 30px
+            background url("../../img/collect_icon_press@2x.png") no-repeat center
             background-size 100%
     .index_img_active
         &:after
@@ -284,6 +348,7 @@ p
     .bottom-index
         background url("../../img/bottom_press_icon04@2x.png") no-repeat top 10px center
         background-size 25px
+        color #ea5404
     .bottom-pre
         background url("../../img/bottom_nor_icon03@2x.png") no-repeat top 10px center
         background-size 25px

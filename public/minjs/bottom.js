@@ -1,0 +1,1 @@
+$(".bottom-me").on("tap",function(){location.href="../info/info.html"});

@@ -1,3 +1,9 @@
+//点击跳转到已登录
+$('.bottom-me').on('tap',function(){
+    location.href = '../info/info_logged.html'
+})
+
+/**轮播图 */
 //获取轮播每个元素
 var $slider = $('.slider_block');
 //获取轮播容器
@@ -72,9 +78,44 @@ $('.query_block').on('tap',function(){
     }
 })
 
-/**
-var $queryPrice = $('.query_price');
-$('.query_price').on('tap',function(){
-
+/**价格升降 */
+$('#price').on('tap',function(){
+    if($(this).hasClass('asc_price')){
+        $(this).removeClass('asc_price').addClass('desc_price');
+        $('#prinfo').removeClass('price-info');
+        $('#descinfo').removeClass('price_none')
+        $('#ascinfo').addClass('price_none')
+    }else if($(this).hasClass('desc_price')){
+        $(this).removeClass('desc_price');
+        $('#prinfo').addClass('price-info');
+    }else{
+        $(this).addClass('asc_price')
+        $('#prinfo').removeClass('price-info');
+        $('#descinfo').addClass('price_none')
+    }
 })
-*/
+
+
+/**点击收藏 */
+$('.index_img').on('tap',function(){
+    if($(this).hasClass('index_collect')){
+        $(this).removeClass('index_collect');
+    }else{
+        $(this).addClass('index_collect');
+    }
+    
+})
+
+
+/**返回顶部*/
+window.onload = function(){
+  var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+  var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+  window.onscroll = function(){
+    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+  }
+  $('#backtop').on('tap',function(){
+     document.documentElement.scrollTop = document.body.scrollTop =0;
+  })
+}  
+

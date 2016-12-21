@@ -5,17 +5,18 @@ $('.bt-passwd').on('tap',function(){
     location.href = './forget.html'
 })
 $('.icon-back').on('tap',function(){
-    location.href = '../loading.html'
+    location.href = '../info/info.html'
 })
 
 
 $(window).on('keyup',function(){
     var tel = $('#tel').val();
     var pwd = $('#password').val();
-    var regTel = /^\d{11}$/;
+    var regTel = /^1\d{10}$/;
+    
     if(tel !='' && regTel.test(tel) && pwd.length>=6){
         $('#btnlogin').on('tap',function(){
-            location.href = '../index/index.html'
-        }).css('background','#ea5404')
+            location.href = '../info/info_logged.html'
+        }).css('background','#ea5404');
     }
 })

@@ -29,9 +29,18 @@ body {
 }
 .header_set {
   position: relative;
+/**
+    &:after
+        content ''
+        position absolute
+        display block
+        width 20px
+        height 40px
+        right 15px
+        background url("../../img/nav_set_icon@2x.png") no-repeat top 15px center
+        background-size 20px     */
 }
-.header_set:after {
-  content: '';
+.header_set .header_img {
   position: absolute;
   display: block;
   width: 20px;
@@ -302,4 +311,5 @@ body {
 .bottom-cells .bottom-me {
   background: url("../../img/bottom_press_icon01@2x.png") no-repeat top 10px center;
   background-size: 25px;
+  color: #ea5404;
 }

@@ -15,11 +15,12 @@ $(window).on('keyup',function(){
     var tel = $('#tel').val();
     var pwd = $('#password').val();
     var againpwd = $('#againpwd').val();
+    var code = $('#btnpin').val();
     var regTel = /^\d{11}$/;
-    if(tel !='' && regTel.test(tel) && pwd.length>=6 && againpwd == pwd){
+    if(tel !='' && regTel.test(tel) && pwd.length>=6 && againpwd == pwd && code != ''){
         $('#btn_login').on('tap',function(){
             location.href = './developer.html'
-        }).css('background','#ea5404')
+        }).css('background','#ea5404');
     }
 })
 
@@ -29,6 +30,7 @@ function sendPin(){
     var _res = setInterval(function(){
         $('#btnpin').attr('disabled',true);
         $('#btnpin').val(step + "后重新获取");
+        $('#btnpin').addClass('btn_ok');
         step -=1;
         if(step<=0){
             $('#btnpin').removeAttr('disabled');

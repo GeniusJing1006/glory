@@ -5,11 +5,17 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,
         maximum-scale=1,minimum-scale=1,user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>项目名 - 公司名</title>
+		<title>小辉煌 - 杭州瑞烁网络科技股份有限公司</title>
+        <meta name="keywords" content="杭州瑞烁网络科技股份有限公司"/>
+        <meta name="description" content="杭州瑞栎网络科技有限公司成立于2015年是一家专注于专业市场电子商务公司
+        杭州瑞栎网络科技有限公司成立于2015年， 公司主要经营教育软件 多媒体技术 游戏软件 计算机数据处理技术 计算机
+        系统集成 教育信息咨询，公司秉承与客户共赢理念，为企业提供高效、务实的互联网营销服务，在专业市场的电子商务
+        建设领域具有独特优势和丰富经验。"/>
         <link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="../public/css/info/info_detail.css">
 	</head>
 	<body>
+        <div class="setting_cover cover_none" id="set_cover"></div>
 		<header class="header">
             <i class="icon-back"></i>
             <span class="header_title">设置</span>
@@ -18,15 +24,22 @@
             <span class="setting_text">接收需求</span>
             <span class="setting_img"><span class="set_move"></span></span>
         </div>
-        <div class="setting_cell setting_after">
+        <div class="setting_cell setting_after set_about">
             <span class="setting_text">关于</span>
         </div>
-        <div class="setting_cell setting_after">
+        <div class="setting_cell setting_after set_clear">
             <span class="setting_text">清除缓存</span>
-            <span class="setting_M">7.02M</span>
+            <span class="setting_M" id="set_M">7.02M</span>
         </div>
         <div class="setting_quit">
             退出登录
         </div>
+        <div class="setting_out out_none" id="set_out">
+            <div class="set_que">您确定要清理缓存么？</div>
+            <div class="set_choose"><div class="set_no">取消</div><div class="set_ok">确定</div></div>
+        </div>
 	</body>
+    <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="../public/libs/zepto/touch.js"></script>
+    <script src="../public/js/info/info.js"></script>
 </html>
