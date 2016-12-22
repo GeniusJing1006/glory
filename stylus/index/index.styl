@@ -3,6 +3,10 @@
 p
     padding 0
     margin 0
+ul
+    padding 0
+    margin 0
+    list-style none
 .header
     position absolute
     top 0
@@ -146,10 +150,16 @@ p
             line-height 20px
             font-size 14px
             color #646464
+            overflow scroll
         .icon
             display block
             height 15px
             background url("../../img/content_icon02_nor@2x.png") no-repeat center
+            background-size 10%
+        .icon_active
+            display block
+            height 15px
+            background url("../../img/content_icon02_press@2x.png") no-repeat center
             background-size 10%
     .query_price
         width 50px
@@ -210,23 +220,135 @@ p
         flex 2
     .info_box
         flex 5
+.query_box
+    position relative       
+    .down-box
+        display none
+        position absolute
+        z-index 20
+        top 46px
 
-.down-box
-    display none
-    position absolute
-    z-index 20
+.area_choose
+    background #fff
+/* 区域下拉 */
 .down_area
     width 100%
     height 421px
-    /**
-    .area
+    background-color #fff
+    .area_left
         width 50%
-        float left
+        height 100%
         background-color #f0f0f0
-    .street
-        width 50%
+        overflow auto
+        .area_list
+            .area_li
+                width 100%
+                height 45px
+                line-height 45px
+                padding-left 12px
+            
+    .area_right
         float right
-        background-color #fff*/
+        position absolute
+        top 0
+        right 0
+        left 50%
+        margin-left 12px
+        .right_li
+            height 45px
+            width 100%
+            line-height 45px
+            border-bottom 1px solid #d6d7dc
+        .active
+            color #ea5404
+    .area_none
+        display none
+/* 面积下拉 */
+.down_proportion
+    width 100%
+    height 365px
+    background-color #f0f0f0
+    font-size 15px
+    text-align center
+    .proportion_list
+        width 100%
+        .proportion_li
+            width 100%
+            height 45px
+            line-height 45px
+        .fill_li
+            overflow auto
+            input
+                width 70px
+                height 30px
+                border-radius 5px
+                border 1px solid #d6d7dc
+            .till
+                width 35px
+                height 30px
+                display inline-block
+                position relative
+                &:after
+                    content ''
+                    position absolute
+                    top 24px
+                    left 8px
+                    background-color #d6d7dc
+                    height 1px
+                    width 20px
+            .fill_sub
+                width 55px
+                height 35px
+                line-height 35px
+                margin-left 5px
+                border 1px solid #d6d7dc
+                border-radius 5px
+                background-color #fff
+                font-size 10px
+
+/* 单价下拉 */
+.down_price
+    width 100%
+    height 410px
+    background-color #f0f0f0
+    font-size 15px
+    text-align center
+    .price_list
+        width 100%
+        .price_li
+             width 100%
+             height 45px
+             line-height 45px
+        .fill_price
+            overflow auto
+            input
+                width 70px
+                height 30px
+                border-radius 5px
+                border 1px solid #d6d7dc
+            .till
+                width 35px
+                height 30px
+                display inline-block
+                position relative
+                &:after
+                    content ''
+                    position absolute
+                    top 24px
+                    left 8px
+                    background-color #d6d7dc
+                    height 1px
+                    width 20px
+            .fill_refer
+                width 55px
+                height 35px
+                line-height 35px
+                margin-left 5px
+                border 1px solid #d6d7dc
+                border-radius 5px
+                background-color #fff
+                font-size 10px
+            
 .block_box
     display flex
     width 100%
@@ -325,6 +447,7 @@ p
     list-style none
     display flex
     font-size 14px
+    z-index 30
     .bottom-cell
         flex 1
         width 20%
@@ -432,3 +555,11 @@ p
         background-size 100%
         top 7px
         right 8px
+
+.index_cover
+    width 100%
+    height 100%
+    position fixed
+    position absolute
+    z-index 20
+    background rgba(0,0,0,0.3)

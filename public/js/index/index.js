@@ -10,7 +10,6 @@ var $slider = $('.slider_block');
 var $sliderCon = $('.slider_container');
 //获取所有的点
 var $point = $('.point_block');
-
 //获取屏幕宽度
 var wd = $(window).width();
 //获取轮播个数
@@ -23,7 +22,6 @@ var hg = wd * 0.85;
 $sliderCon.width(allWd);
 //设置元素宽高
 $slider.width(wd).height(hg);
-
 //表示当前元素
 var swipeNow = 0;
 var slideTime;
@@ -65,18 +63,6 @@ function autoSwipe(){
 }
 autoSwipe();
 
-var $queryBlock = $('.query_block')
-$('.query_block').on('tap',function(){
-    var $self = $(this);
-    var index = $(this).index();
-    if($self.hasClass('active')){
-        $self.removeClass('active')
-    }else{
-        $queryBlock.removeClass('active')
-        $self.addClass('active')
-        $('.down-box').hide().eq(index).show();
-    }
-})
 
 /**价格升降 */
 $('#price').on('tap',function(){
@@ -95,7 +81,6 @@ $('#price').on('tap',function(){
     }
 })
 
-
 /**点击收藏 */
 $('.index_img').on('tap',function(){
     if($(this).hasClass('index_collect')){
@@ -103,7 +88,99 @@ $('.index_img').on('tap',function(){
     }else{
         $(this).addClass('index_collect');
     }
-    
+})
+
+/**选择区域 */
+//点击展开或收起下拉菜单
+var $queryBlock = $('.query_block')
+$('.query_block').on('tap',function(){
+    var $self = $(this);
+    var index = $(this).index();
+    if($self.hasClass('active')){
+        $self.removeClass('active');
+        $queryBlock.not(this).removeClass('active');
+        $('.down-box').hide();
+        $self.children('.icon').removeClass('icon_active');
+    }else{
+        $queryBlock.removeClass('active');
+        $self.addClass('active');
+        $queryBlock.not(this).addClass('active');
+        $('.down-box').hide().eq(index).show();
+        $self.children('.icon').addClass('icon_active');
+    }
+})
+
+/**"区域"-area下拉界面 */
+//选中左边地区，使其背景变成白色
+$('.area_li').on('tap',function(){
+    $(this).addClass('area_choose');
+    $('.area_li').not(this).removeClass('area_choose');
+})
+//选中“浦东”时，右侧出现浦东的街道，选中其他地区时，右侧街道消失
+$('.area_list li.area_pd').on('tap',function(){
+    $('.area_right').removeClass('area_none');
+})
+$('.area_list li.area_li').not($('.area_pd')).on('tap',function(){
+    $('.area_right').addClass('area_none');
+})
+//选中右侧街道时收起下拉区域，并将街道传到区域框中
+$('.right_li').on('tap',function(){
+    var area = $(this).text();
+    $('.query_area').text(area);
+    $('.block_area').removeClass('active').children('.icon').removeClass('icon_active');
+    $('.down_area').hide();
+})
+
+/**"面积"-proportion下拉界面 */
+//选择一个面积，背景变白色
+$('.proportion_li').on('tap',function(){
+    $(this).addClass('area_choose');
+    $('.proportion_li').not(this).removeClass('area_choose');
+})
+//将选中的值传到面积中并收起下拉区域
+$('.proportion_li').on('tap',function(){
+    var val = $(this).text();
+    $('.query_proportion').text(val);
+    $('.block_proportion').removeClass('active').children('.icon').removeClass('icon_active')
+    $('.down_proportion').hide();
+})
+//输入框中的值传到面积中，点击"确定"按钮收起下拉区域
+$('.fill_sub').on('tap', function(){
+    var reg = /^\d{0,6}$/;
+    var min = $('.min').val();
+    var max = $('.max').val();
+    //console.log(min<max)
+    if(reg.test(min) && reg.test(max) && min<=max){
+        $('.query_proportion').text(min+'-'+max);
+        $('.block_proportion').removeClass('active').children('.icon').removeClass('icon_active')
+        $('.down_proportion').hide();
+    }
+})
+
+/**单价 */
+//选择一个面积，背景变白色
+$('.price_li').on('tap',function(){
+    $(this).addClass('area_choose');
+    $('.price_li').not(this).removeClass('area_choose');
+})
+//将选中的值传到面积中并收起下拉区域
+$('.price_li').on('tap',function(){
+    var val = $(this).text();
+    $('.price_text').text(val).css('font-size','12px');
+    $('.block_price').removeClass('active').children('.icon').removeClass('icon_active')
+    $('.down_price').hide();
+})
+//输入框中的值传到面积中，点击"确定"按钮收起下拉区域
+$('.fill_refer').on('tap', function(){
+    var reg = /^\d{0,5}$/;
+    var minprice = $('.minprice').val();
+    var maxprice = $('.maxprice').val();
+    //console.log(min<max)
+    if(reg.test(minprice) && reg.test(maxprice) && minprice<=maxprice){
+        $('.price_text').text(minprice+'-'+maxprice+'元/m2/天');
+        $('.block_price').removeClass('active').children('.icon').removeClass('icon_active')
+        $('.down_price').hide();
+    }
 })
 
 

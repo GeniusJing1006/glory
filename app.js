@@ -5,6 +5,27 @@ var express = require('express');
 //引入转发请求插件
 var proxy = require('http-proxy-middleware')
 
+var sha1 = require('sha1')
+
+var nodegrass = require('nodegrass');
+
+
+
+//定义一个获取access_token的请求
+app.get("/token",function(req,res){
+	nodegrass.get(acessTodenUrl,function(data,status,headers){
+		//console.log(`data ${data}`);
+		//console.log(`status ${status}`);
+		//console.log(`headers ${JSON.stringify(headers)}`);
+		res.send(data).end();
+	});
+})
+
+//创建自定义菜单
+//app.post("/create",function(req,res){
+
+//})
+
 //实例化express
 var app = express();
 
@@ -40,6 +61,25 @@ app.get('/login',function(req,res){
 	res.send('hahaha')
 });
 
+app.use('/wexin',function(req,res){
+	
+	var obj = req.query;
+	console.log('wexin',obj)
+	var arr = ["glory",obj.timestamp,obj.nonce];
+	arr.sort();
+
+	var str = sha1(arr.join(""));
+	console.log('sha1	',str)
+    
+	console.log('signature',obj.signature === str);
+	if(obj.signature === str){
+
+		res.send(obj.echostr).end();
+	}else{
+		res.send("验证失败").end();
+	}
+})
+
 //监听端口号9999，启动服务
 app.listen(9999,function(){
 	console.log('server run at port 9999')
@@ -47,3 +87,4 @@ app.listen(9999,function(){
 
 //模块导出
 module.exports = app;
+

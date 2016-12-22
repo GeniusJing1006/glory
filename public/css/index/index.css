@@ -24,6 +24,11 @@ p {
   padding: 0;
   margin: 0;
 }
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .header {
   position: absolute;
   top: 0;
@@ -188,11 +193,18 @@ p {
   line-height: 20px;
   font-size: 14px;
   color: #646464;
+  overflow: scroll;
 }
 .query_box .query_block .icon {
   display: block;
   height: 15px;
   background: url("../../img/content_icon02_nor@2x.png") no-repeat center;
+  background-size: 10%;
+}
+.query_box .query_block .icon_active {
+  display: block;
+  height: 15px;
+  background: url("../../img/content_icon02_press@2x.png") no-repeat center;
   background-size: 10%;
 }
 .query_box .query_price {
@@ -266,23 +278,155 @@ p {
 .block_box .info_box {
   flex: 5;
 }
-.down-box {
+.query_box {
+  position: relative;
+}
+.query_box .down-box {
   display: none;
   position: absolute;
   z-index: 20;
+  top: 46px;
 }
+.area_choose {
+  background: #fff;
+}
+/* 区域下拉 */
 .down_area {
   width: 100%;
   height: 421px;
-/**
-    .area
-        width 50%
-        float left
-        background-color #f0f0f0
-    .street
-        width 50%
-        float right
-        background-color #fff*/
+  background-color: #fff;
+}
+.down_area .area_left {
+  width: 50%;
+  height: 100%;
+  background-color: #f0f0f0;
+  overflow: auto;
+}
+.down_area .area_left .area_list .area_li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 12px;
+}
+.down_area .area_right {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  margin-left: 12px;
+}
+.down_area .area_right .right_li {
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+  border-bottom: 1px solid #d6d7dc;
+}
+.down_area .area_right .active {
+  color: #ea5404;
+}
+.down_area .area_none {
+  display: none;
+}
+/* 面积下拉 */
+.down_proportion {
+  width: 100%;
+  height: 365px;
+  background-color: #f0f0f0;
+  font-size: 15px;
+  text-align: center;
+}
+.down_proportion .proportion_list {
+  width: 100%;
+}
+.down_proportion .proportion_list .proportion_li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+.down_proportion .proportion_list .fill_li {
+  overflow: auto;
+}
+.down_proportion .proportion_list .fill_li input {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #d6d7dc;
+}
+.down_proportion .proportion_list .fill_li .till {
+  width: 35px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+}
+.down_proportion .proportion_list .fill_li .till:after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 8px;
+  background-color: #d6d7dc;
+  height: 1px;
+  width: 20px;
+}
+.down_proportion .proportion_list .fill_li .fill_sub {
+  width: 55px;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 5px;
+  border: 1px solid #d6d7dc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 10px;
+}
+/* 单价下拉 */
+.down_price {
+  width: 100%;
+  height: 410px;
+  background-color: #f0f0f0;
+  font-size: 15px;
+  text-align: center;
+}
+.down_price .price_list {
+  width: 100%;
+}
+.down_price .price_list .price_li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+.down_price .price_list .fill_price {
+  overflow: auto;
+}
+.down_price .price_list .fill_price input {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #d6d7dc;
+}
+.down_price .price_list .fill_price .till {
+  width: 35px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+}
+.down_price .price_list .fill_price .till:after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 8px;
+  background-color: #d6d7dc;
+  height: 1px;
+  width: 20px;
+}
+.down_price .price_list .fill_price .fill_refer {
+  width: 55px;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 5px;
+  border: 1px solid #d6d7dc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 10px;
 }
 .block_box {
   display: flex;
@@ -395,6 +539,7 @@ p {
   list-style: none;
   display: flex;
   font-size: 14px;
+  z-index: 30;
 }
 .bottom-cells .bottom-cell {
   flex: 1;
@@ -521,4 +666,12 @@ p {
   background-size: 100%;
   top: 7px;
   right: 8px;
+}
+.index_cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  position: absolute;
+  z-index: 20;
+  background: rgba(0,0,0,0.3);
 }
