@@ -12,6 +12,7 @@ var nodegrass = require('nodegrass');
 
 
 //定义一个获取access_token的请求
+/**
 app.get("/token",function(req,res){
 	nodegrass.get(acessTodenUrl,function(data,status,headers){
 		//console.log(`data ${data}`);
@@ -19,7 +20,7 @@ app.get("/token",function(req,res){
 		//console.log(`headers ${JSON.stringify(headers)}`);
 		res.send(data).end();
 	});
-})
+}) */
 
 //创建自定义菜单
 //app.post("/create",function(req,res){
@@ -31,11 +32,14 @@ var app = express();
 
 //定义通过 /api 访问的请求,转发到指定路径
 app.use('/api',proxy({
-	target:'http://122.10.30.153:9901',
+	target:'http://guanjp.com:9805',
+	changeOrigin:true,
+	ws:true,
+	cookieRewrite:true,
 	pathRewrite:{
 		'^/api':'/'
 	}
-}))
+}));
 //  http://127.0.0.1:9888/api/index
 //替换为 http://122.10.30.153:9901/index
 

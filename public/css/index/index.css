@@ -166,13 +166,13 @@ ul {
   display: flex;
   width: 100%;
   height: 45px;
-  margin-top: 10px;
   background: #fff;
   border-bottom: 1px solid #d6d7dc;
 }
 .query_box .query_block {
   flex: 1;
   position: relative;
+  color: #646464;
 }
 .query_box .query_block:after {
   content: '';
@@ -192,8 +192,7 @@ ul {
   text-align: center;
   line-height: 20px;
   font-size: 14px;
-  color: #646464;
-  overflow: scroll;
+/*overflow scroll*/
 }
 .query_box .query_block .icon {
   display: block;
@@ -280,11 +279,12 @@ ul {
 }
 .query_box {
   position: relative;
+  z-index: 100;
 }
 .query_box .down-box {
   display: none;
   position: absolute;
-  z-index: 20;
+  z-index: 100;
   top: 46px;
 }
 .area_choose {
@@ -326,6 +326,77 @@ ul {
   color: #ea5404;
 }
 .down_area .area_none {
+  display: none;
+}
+/* 更多下拉 */
+.down_more {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+.down_more .active {
+  color: #ea5404;
+}
+.down_more .more_left {
+  width: 50%;
+  height: 100%;
+}
+.down_more .more_left .more_list .more_li {
+  height: 45px;
+  line-height: 45px;
+  padding-left: 12px;
+}
+.down_more .tube {
+  float: right;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  height: 100%;
+  padding-left: 12px;
+  overflow: auto;
+}
+.down_more .tube .tube_li {
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+  border-bottom: 1px solid #d6d7dc;
+}
+.down_more .type {
+  float: right;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  height: 100%;
+  padding-left: 12px;
+  overflow: auto;
+}
+.down_more .type .type_li {
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+  border-bottom: 1px solid #d6d7dc;
+}
+.down_more .fitment {
+  float: right;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 50%;
+  height: 100%;
+  padding-left: 12px;
+  overflow: scroll;
+}
+.down_more .fitment .fitment_li {
+  height: 45px;
+  width: 100%;
+  line-height: 45px;
+  border-bottom: 1px solid #d6d7dc;
+}
+.down_more .status {
   display: none;
 }
 /* 面积下拉 */
@@ -672,6 +743,7 @@ ul {
   height: 100%;
   position: fixed;
   position: absolute;
+  display: none;
   z-index: 20;
   background: rgba(0,0,0,0.3);
 }

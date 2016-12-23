@@ -36,7 +36,7 @@ gulp.task('browserSync',['nodemon'],function(){
             target:'http://127.0.0.1:9999'
         },
         files:['*'],
-        port:9888,
+        port:16936,
         open:false
     })
 })

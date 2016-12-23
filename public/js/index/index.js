@@ -98,15 +98,21 @@ $('.query_block').on('tap',function(){
     var index = $(this).index();
     if($self.hasClass('active')){
         $self.removeClass('active');
-        $queryBlock.not(this).removeClass('active');
+        $queryBlock.not($self).addClass('active');
         $('.down-box').hide();
         $self.children('.icon').removeClass('icon_active');
+        $('.back_top').show();
+        $('.index_cover').hide();
+        $self.children('.text').css('color','#646464')
     }else{
-        $queryBlock.removeClass('active');
+        //$queryBlock.removeClass('active');
         $self.addClass('active');
-        $queryBlock.not(this).addClass('active');
+        $queryBlock.not($self).removeClass('active');
         $('.down-box').hide().eq(index).show();
         $self.children('.icon').addClass('icon_active');
+        $('.back_top').hide();
+        $('.index_cover').show();
+        $self.children('.text').css('color','#ea5404')
     }
 })
 
@@ -129,6 +135,8 @@ $('.right_li').on('tap',function(){
     $('.query_area').text(area);
     $('.block_area').removeClass('active').children('.icon').removeClass('icon_active');
     $('.down_area').hide();
+    $('.index_cover').hide();
+    $('.back_top').show();
 })
 
 /**"面积"-proportion下拉界面 */
@@ -143,6 +151,8 @@ $('.proportion_li').on('tap',function(){
     $('.query_proportion').text(val);
     $('.block_proportion').removeClass('active').children('.icon').removeClass('icon_active')
     $('.down_proportion').hide();
+    $('.index_cover').hide();
+    $('.back_top').show();
 })
 //输入框中的值传到面积中，点击"确定"按钮收起下拉区域
 $('.fill_sub').on('tap', function(){
@@ -154,10 +164,12 @@ $('.fill_sub').on('tap', function(){
         $('.query_proportion').text(min+'-'+max);
         $('.block_proportion').removeClass('active').children('.icon').removeClass('icon_active')
         $('.down_proportion').hide();
+        $('.index_cover').hide();
+        $('.back_top').show();
     }
 })
 
-/**单价 */
+/**单价-price */
 //选择一个面积，背景变白色
 $('.price_li').on('tap',function(){
     $(this).addClass('area_choose');
@@ -169,6 +181,8 @@ $('.price_li').on('tap',function(){
     $('.price_text').text(val).css('font-size','12px');
     $('.block_price').removeClass('active').children('.icon').removeClass('icon_active')
     $('.down_price').hide();
+    $('.index_cover').hide();
+    $('.back_top').show();
 })
 //输入框中的值传到面积中，点击"确定"按钮收起下拉区域
 $('.fill_refer').on('tap', function(){
@@ -180,8 +194,69 @@ $('.fill_refer').on('tap', function(){
         $('.price_text').text(minprice+'-'+maxprice+'元/m2/天');
         $('.block_price').removeClass('active').children('.icon').removeClass('icon_active')
         $('.down_price').hide();
+        $('.index_cover').hide();
+        $('.back_top').show();
     }
 })
+
+/**更多-more */
+//选中左边地区，使其背景变成白色
+$('.more_li').on('tap',function(){
+    $(this).addClass('area_choose');
+    $('.more_li').not(this).removeClass('area_choose');
+})
+//点击更多下拉区域
+$('.block_more').on('tap',function(){
+    $('.down_more').css('height','420px')
+})
+//点击地铁，出现右侧选项
+$('.more_tube').on('tap',function(){
+    $('.tube').removeClass('status');
+    $('.type').addClass('status');
+    $('.fitment').addClass('status');
+    $('.down_more').css('height','420px')
+})
+//点击房型，出现右侧选项
+$('.more_type').on('tap',function(){
+    $('.tube').addClass('status');
+    $('.type').removeClass('status');
+    $('.fitment').addClass('status');
+    $('.down_more').css('height','370px')
+})
+//点击装修，出现右侧选项
+$('.more_fitment').on('tap',function(){
+    $('.tube').addClass('status');
+    $('.type').addClass('status');
+    $('.fitment').removeClass('status');
+    $('.down_more').css('height','280px')
+})
+//将选中的值传到更多中并收起下拉区域
+$('.tube_li').on('tap',function(){
+    var val = $(this).text();
+    $('.more_text').text(val).css('font-size','12px');
+    $('.block_more').removeClass('active').children('.icon').removeClass('icon_active')
+    $('.down_more').hide();
+    $('.index_cover').hide();
+    $('.back_top').show();
+})
+$('.type_li').on('tap',function(){
+    var val = $(this).text();
+    $('.more_text').text(val).css('font-size','12px');
+    $('.block_more').removeClass('active').children('.icon').removeClass('icon_active')
+    $('.down_more').hide();
+    $('.index_cover').hide();
+    $('.back_top').show();
+})
+$('.fitment_li').on('tap',function(){
+    var val = $(this).text();
+    $('.more_text').text(val).css('font-size','12px');
+    $('.block_more').removeClass('active').children('.icon').removeClass('icon_active')
+    $('.down_more').hide();
+    $('.index_cover').hide();
+    $('.back_top').show();
+})
+
+
 
 
 /**返回顶部*/
@@ -196,3 +271,18 @@ window.onload = function(){
   })
 }  
 
+/**选择城市 */
+$('.icon-back').on('tap',function(){
+    location.href = './index_city.html'
+})
+//关闭
+$('.icon-close').on('tap',function(){
+    location.href = './index.html'
+})
+//选择城市
+$('.city_li').on('tap',function(){
+    //console.log($(this).text())
+    var val = $(this).text();
+    location.href = './index.html'
+    $('.icon-back').text(val);
+})
