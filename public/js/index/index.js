@@ -64,6 +64,11 @@ function autoSwipe(){
 autoSwipe();
 
 
+/**点击搜索 */
+$('.search_input').on('tap',function(){
+    location.href = './index_search.html'
+})
+
 /**价格升降 */
 $('#price').on('tap',function(){
     if($(this).hasClass('asc_price')){
@@ -285,4 +290,14 @@ $('.city_li').on('tap',function(){
     var val = $(this).text();
     location.href = './index.html'
     $('.icon-back').text(val);
+})
+
+/**搜索页面 */
+//点击取消，返回主页
+$('.search_del').on('tap',function(){
+    location.href = './index.html'
+})
+//点击清除
+$('.near_right').on('tap',function(){
+    $('.search_cells').remove();
 })
