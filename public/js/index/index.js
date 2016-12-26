@@ -161,7 +161,7 @@ $('.fill_sub').on('tap', function(){
     var max = $('.max').val();
     //console.log(min<max)
     if(reg.test(min) && reg.test(max) && min<=max){
-        $('.query_proportion').text(min+'-'+max);
+        $('.query_proportion').text(min+'-'+max+'m2');
         $('.block_proportion').removeClass('active').children('.icon').removeClass('icon_active')
         $('.down_proportion').hide();
         $('.index_cover').hide();

@@ -31,6 +31,7 @@ app.get("/token",function(req,res){
 var app = express();
 
 //定义通过 /api 访问的请求,转发到指定路径
+/**
 app.use('/api',proxy({
 	target:'http://guanjp.com:9805',
 	changeOrigin:true,
@@ -39,7 +40,7 @@ app.use('/api',proxy({
 	pathRewrite:{
 		'^/api':'/'
 	}
-}));
+})); */
 //  http://127.0.0.1:9888/api/index
 //替换为 http://122.10.30.153:9901/index
 
