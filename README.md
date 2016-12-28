@@ -5,7 +5,7 @@
     ```
 * 进入目录
     ``` 
-     cd allcommand
+     cd glory
     ```
 * 安装依赖
     ``` 
@@ -13,12 +13,12 @@
     ```
 * 启动项目
     ``` 
-     node app.js
+     node server.js
     ```
 * 访问
     ``` 
      http://127.0.0.1:16936
     ```
 =======
-# glory_estate
+# glory
 >>>>>>> 26d106ee7b27b67ddf60268a62bbfa8938f2f224
