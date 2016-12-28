@@ -37,6 +37,8 @@ p {
   background: rgba(0,0,0,0.3);
   position: absolute;
   z-index: 10;
+}
+.cover_edit {
   display: none;
 }
 .photo-cells {
@@ -68,7 +70,7 @@ p {
   height: 44px;
   line-height: 44px;
 }
-#photos {
+.photos {
   display: none;
 }
 .info_box {

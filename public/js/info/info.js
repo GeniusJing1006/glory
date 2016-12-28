@@ -58,19 +58,15 @@ $('.set_move').on('tap',function(){
 /**修改个人资料页面 */
 //点击增添微信、营业执照或楼宇产证
 $('.photo').on('tap',function(){
-    var photos = document.getElementById("photos");
-    /**
-    if($('.photo-cells').style.display == 'none'){
-        $('.photo-cells').style.display == 'block'
-    }else{
-        $('.photo-cells').style.display == 'none'
-    } */
-    if(photos.style.display == 'none'){
-        //photos.style.display == 'block'
-        console.log(1)
-    }else{
-        photos.style.display == 'block'
-        console.log(2)
+    if($('.photo-cells').hasClass('photos')){
+        $('.photo-cells').removeClass('photos')
+        $('.info-cover').removeClass('cover_edit')
     }
 })
-
+//点击取消
+$('.photo-active').on('tap',function(){
+    if(!$('.photo-cells').hasClass('photos')){
+        $('.photo-cells').addClass('photos')
+        $('.info-cover').addClass('cover_edit')
+    }
+})
