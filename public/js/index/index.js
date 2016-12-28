@@ -1,4 +1,4 @@
-//点击跳转到已登录
+//点击跳转到已登录页面
 $('.bottom-me').on('tap',function(){
     location.href = '../info/info_logged.html'
 })
@@ -64,6 +64,11 @@ function autoSwipe(){
 autoSwipe();
 
 
+/**点击搜索 */
+$('.search_input').on('tap',function(){
+    location.href = './index_search.html'
+})
+
 /**价格升降 */
 $('#price').on('tap',function(){
     if($(this).hasClass('asc_price')){
@@ -98,7 +103,7 @@ $('.query_block').on('tap',function(){
     var index = $(this).index();
     if($self.hasClass('active')){
         $self.removeClass('active');
-        $queryBlock.not($self).addClass('active');
+        //$queryBlock.not($self).addClass('active');
         $('.down-box').hide();
         $self.children('.icon').removeClass('icon_active');
         $('.back_top').show();
@@ -284,5 +289,16 @@ $('.city_li').on('tap',function(){
     //console.log($(this).text())
     var val = $(this).text();
     location.href = './index.html'
-    $('.icon-back').text(val);
+    //$('.icon-back').text(val);
+})
+
+
+/**搜索页面 */
+//点击取消，返回主页
+$('.search_del').on('tap',function(){
+    location.href = './index.html'
+})
+//点击清除
+$('.near_right').on('tap',function(){
+    $('.search_cells').remove();
 })

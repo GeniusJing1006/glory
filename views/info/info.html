@@ -17,7 +17,7 @@
 	<body>
 		<header class="header header_set">
             <span class="header_title">我</span>
-			<span class="header_img"></span>
+			<span class="header_unlog"></span>
         </header>
 		<div class="login_box">
 			<div class="login_img"></div>
@@ -56,8 +56,8 @@
     <script src="../public/libs/zepto/touch.js"></script>
     <script>
 		//点击跳转到设置页面
-		$('.header_img').on('tap',function(){
-			location.href = './info_setting.html'
+		$('.header_unlog').on('tap',function(){
+			location.href = './unlog_setting.html'
 		})
 		//点击跳转到登录页面
 		$('.login_box').on('tap',function(){

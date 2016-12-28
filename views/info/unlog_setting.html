@@ -15,21 +15,31 @@
         <link rel="stylesheet" href="../public/css/info/info_detail.css">
 	</head>
 	<body>
-		<header class="header about-title">
-            <i class="icon-back"></i>
-            <span class="header_title about-title">关于</span>
+        <div class="setting_cover cover_none" id="set_cover"></div>
+		<header class="header">
+            <i class="unlog_back"></i>
+            <span class="header_title">设置</span>
         </header>
-        <div class="about_banner">
-            <div class="about_middle"><span class="about_text">v1.0.0</span></div>
+        <div class="setting_cell">
+            <span class="setting_text">接收需求</span>
+            <span class="setting_img"><span class="set_move"></span></span>
         </div>
-        <div class="about_cell">电话<span class="about_right">025-87654321</span></div>
-        <div class="about_cell">服务条款</div>
+        <div class="setting_cell setting_after set_about">
+            <span class="setting_text">关于</span>
+        </div>
+        <div class="setting_cell setting_after set_clear">
+            <span class="setting_text">清除缓存</span>
+            <span class="setting_M" id="set_M">0</span>
+        </div>
+        <div class="setting_quit">
+            退出登录
+        </div>
+        <div class="setting_out out_none" id="set_out">
+            <div class="set_que">您确定要清理缓存么？</div>
+            <div class="set_choose"><div class="set_no">取消</div><div class="set_ok">确定</div></div>
+        </div>
 	</body>
     <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
     <script src="../public/libs/zepto/touch.js"></script>
-    <script>
-        $('.icon-back').on('tap',function(){
-            location.href = './info_setting.html'
-        })
-    </script>
+    <script src="../public/js/info/info.js"></script>
 </html>

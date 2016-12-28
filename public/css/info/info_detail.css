@@ -14,6 +14,13 @@ body {
   background: url("../../img/nav_back_icon@2x.png") no-repeat center;
   background-size: 25%;
 }
+.header .unlog_back {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../../img/nav_back_icon@2x.png") no-repeat center;
+  background-size: 25%;
+}
 .header .header_title {
   flex: 1;
   padding-right: 50px;
@@ -30,6 +37,7 @@ p {
   background: rgba(0,0,0,0.3);
   position: absolute;
   z-index: 10;
+  display: none;
 }
 .photo-cells {
   z-index: 20;
@@ -59,6 +67,9 @@ p {
   color: #ea5404;
   height: 44px;
   line-height: 44px;
+}
+#photos {
+  display: none;
 }
 .info_box {
   padding: 20px 15px;
@@ -441,11 +452,16 @@ p {
   border-radius: 25px;
 }
 .setting_cell .setting_img .set_move {
-  width: 31px;
-  height: 31px;
+  width: 30px;
+  height: 30px;
+  top: 1px;
   background-color: #fff;
   position: absolute;
   border-radius: 50%;
+  box-shadow: -1px 1px 5px #888;
+}
+.setting_cell .setting_img .move {
+  right: 0;
 }
 .setting_after {
   position: relative;
