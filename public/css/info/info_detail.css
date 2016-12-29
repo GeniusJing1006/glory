@@ -130,6 +130,7 @@ p {
   font-size: 0.7em;
   white-space: nowrap;
   overflow: hidden;
+  border: none;
 }
 .info-cell .carrier_finish {
   position: absolute;

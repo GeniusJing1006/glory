@@ -7,9 +7,9 @@ $('.unlog_back').on('tap',function(){
 $('.header_img').on('tap',function(){
     location.href = './info_setting.html'
 })
-//点击修改个人资料
+//点击跳转到个人资料页面
 $('.edit_info').on('tap',function(){
-    location.href = './info_developer_edit.html'
+    location.href = './info_developer.html'
 })
 
 //点击跳转到首页
