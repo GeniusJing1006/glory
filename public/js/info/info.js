@@ -70,3 +70,47 @@ $('.photo-active').on('tap',function(){
         $('.info-cover').addClass('cover_edit')
     }
 })
+
+//收藏
+$('.s_left').on('tap',function(){
+    location.href = './demand_coll.html'
+})
+
+//我发布的需求
+$('.link_cell').on('tap',function(){
+    location.href = './info_demand.html'
+})
+
+//我发布的房源
+
+
+//我预约的房源
+$('.link_cell-2').on('tap',function(){
+    location.href = './house_order.html'
+})
+
+//历史交易
+$('.link_cell-3').on('tap',function(){
+    location.href = './info_history.html'
+})
+
+//过期房源
+$('.link_cell-4').on('tap',function(){
+    location.href = './info_overdue.html'
+})
+
+/**收藏页面 */
+//点击需求
+$('.banner_left').on('tap',function(){
+    $(this).addClass('active');
+    $('.banner_right').removeClass('active');
+    $('.demand_cells').show();
+    $('.house_coll').hide();
+})
+//点击房源
+$('.banner_right').on('tap',function(){
+    $(this).addClass('active');
+    $('.banner_left').removeClass('active');
+    $('.demand_cells').hide();
+    $('.house_coll').show();
+})

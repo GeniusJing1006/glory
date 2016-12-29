@@ -120,6 +120,15 @@ p {
   line-height: 40px;
   border-bottom: 1px solid #e1e1e1;
 }
+.info-cell .finish {
+  color: #ea5404;
+  font-size: 0.7em;
+  z-index: 50;
+  width: 28px;
+}
+.info-cell .finish .finish_none {
+  display: none;
+}
 .info-cell .info-name {
   flex: 2.5;
   font-size: 0.7em;
@@ -177,6 +186,9 @@ p {
 }
 .image-cell .image-block .title {
   padding: 6px;
+}
+.house_coll {
+  display: none;
 }
 .over-cell {
   display: flex;
@@ -337,7 +349,7 @@ p {
   background-color: #d6d7dc;
 }
 .collect_banner .active {
-  border-bottom: 1px solid #ea5404;
+  border-bottom: 2px solid #ea5404;
 }
 .demand_cells {
   padding: 15px;
