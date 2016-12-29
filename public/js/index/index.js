@@ -1,4 +1,9 @@
-//点击跳转到已登录页面
+//跳转到预约页面
+$('.bottom-pre').on('tap',function(){
+    location.href = '../order/subscribe.html'
+})
+
+//跳转到已登录页面
 $('.bottom-me').on('tap',function(){
     location.href = '../info/info_logged.html'
 })

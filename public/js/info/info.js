@@ -17,6 +17,9 @@ $('.bottom-index').on('tap',function(){
     location.href = '../index/index.html'
 })
 //点击跳转到预约页面
+$('.bottom-pre').on('tap',function(){
+    location.href = '../order/subscribe.html'
+})
 //点击跳转到信息页面
 /**设置页面 */
 //点击返回"我"
