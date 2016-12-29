@@ -82,7 +82,9 @@ $('.link_cell').on('tap',function(){
 })
 
 //我发布的房源
-
+$('.link_cell-1').on('tap',function(){
+    location.href = './house_publish.html'
+})
 
 //我预约的房源
 $('.link_cell-2').on('tap',function(){
@@ -113,4 +115,21 @@ $('.banner_right').on('tap',function(){
     $('.banner_left').removeClass('active');
     $('.demand_cells').hide();
     $('.house_coll').show();
+})
+
+//左滑
+$('.over-cell').on('swipeLeft',function(){
+    $(this).css('left','-67px').css('transition','left 0.5s');
+    $(this).find('.delete').show();
+    $('.over-cell').not($(this)).css('left','0').css('transition','left 0.5s');
+    $('.over-cell').not($(this)).find('.delete').hide();
+}).on('swipeRight',function(){
+    $(this).css('left','0').css('transition','left 0.5s');
+    $(this).find('.delete').hide();
+})
+
+
+//删除
+$('.delete').on('tap',function(){
+    $(this).parent().remove();
 })

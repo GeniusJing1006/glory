@@ -196,6 +196,18 @@ p {
   background: #fff;
   margin-top: 10px;
   height: 115px;
+  position: relative;
+}
+.over-cell .delete {
+  position: fixed;
+  right: 0;
+  background-color: #efeff4;
+  color: #ea5404;
+  width: 67px;
+  text-align: center;
+  height: 115px;
+  line-height: 115px;
+  display: none;
 }
 .over-cell .overdue-img {
   flex: 1;

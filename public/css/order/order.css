@@ -436,6 +436,8 @@ body {
 }
 .subscribe_cell .house_info .btn_receive {
   height: 22px;
+  line-height: 22px;
+  text-align: center;
   width: 54px;
   background: #ea5404;
   border: none;
