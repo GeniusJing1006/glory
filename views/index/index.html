@@ -15,8 +15,9 @@
         <link rel="stylesheet" href="../public/css/index/index.css">
 	</head>
 	<body>
+        <div class="publish_cover publish_none"></div>
 		<header class="header">
-            <span class="icon-back">上海</span>
+            <span class="icon-back" id="address">上海</span>
             <span class="header_title">小辉煌</span>
         </header>
         <div class="search_box">
@@ -214,8 +215,15 @@
                 <li class="bottom-cell bottom-me"><span class="bottom-text">我</span></li>
             </ul>
         </footer>
+        <div class="publish publish_none">
+            <div class="demand"><div class="text">发布需求</div></div>
+            <div class="resource"><div class="text">发布房源</div></div>
+        </div>
+        <div class="publish_bottom publish_none"></div>
+        <div class="publish_close publish_none"></div>
 	</body>
     <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
     <script src="../public/libs/zepto/touch.js"></script>
     <script src="../public/js/index/index.js"></script>
+    <script src="../public/js/component/publish.js"></script>
 </html>

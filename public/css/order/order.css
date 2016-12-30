@@ -8,13 +8,6 @@ body {
   background: rgba(0,0,0,0.2);
   z-index: 10;
 }
-.publish_cover {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(29,28,27,0.97);
-  z-index: 10;
-}
 .header {
   display: flex;
   height: 50px;
@@ -88,6 +81,72 @@ body {
 .order_out .order_choose .order_sure {
   flex: 1;
   color: #ea5404;
+}
+.publish_cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(29,28,27,0.97);
+  z-index: 200;
+}
+.publish {
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  z-index: 200;
+  bottom: 112px;
+  display: flex;
+  color: #fff;
+}
+.publish .demand {
+  flex: 1;
+  width: 95px;
+  height: 95px;
+  background: url("../../img/publish_btn02@2x.png") no-repeat center;
+  background-size: 95px;
+  position: relative;
+}
+.publish .demand .text {
+  position: absolute;
+  left: 50%;
+  margin-left: -2em;
+  top: 100px;
+}
+.publish .resource {
+  flex: 1;
+  width: 95px;
+  height: 95px;
+  background: url("../../img/publish_btn01@2x.png") no-repeat center;
+  background-size: 95px;
+  position: relative;
+}
+.publish .resource .text {
+  position: absolute;
+  left: 50%;
+  margin-left: -2em;
+  top: 100px;
+}
+.publish_bottom {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+}
+.publish_close {
+  width: 15px;
+  height: 15px;
+  background: url("../../img/publish_close_icon@2x.png") no-repeat center;
+  background-size: 15px;
+  position: fixed;
+  bottom: 18px;
+  z-index: 200;
+  left: 50%;
+  margin-left: -8px;
+}
+.publish_none {
+  display: none;
 }
 * {
   padding: 0;
@@ -386,6 +445,17 @@ body {
   position: relative;
   color: #646464;
 }
+.subscribe_cell .delete {
+  position: absolute;
+  right: -68px;
+  background-color: #ff3b30;
+  color: #fff;
+  width: 67px;
+  text-align: center;
+  height: 116px;
+  line-height: 116px;
+  display: none;
+}
 .subscribe_cell .house_img {
   flex: 1;
   width: 100px;
@@ -436,6 +506,8 @@ body {
 }
 .subscribe_cell .house_info .btn_receive {
   height: 22px;
+  line-height: 22px;
+  text-align: center;
   width: 54px;
   background: #ea5404;
   border: none;
@@ -494,6 +566,7 @@ body {
 .bottom-cells .bottom-pre {
   background: url("../../img/bottom_press_icon03@2x.png") no-repeat top 10px center;
   background-size: 25px;
+  color: #ea5404;
 }
 .bottom-cells .bottom-more {
   background: url("../../img/bottom_icon05@2x.png") no-repeat center;
@@ -506,60 +579,4 @@ body {
 .bottom-cells .bottom-me {
   background: url("../../img/bottom_nor_icon01@2x.png") no-repeat top 10px center;
   background-size: 25px;
-}
-.publish {
-  width: 100%;
-  height: 130px;
-  position: fixed;
-  z-index: 10;
-  bottom: 112px;
-  display: flex;
-  color: #fff;
-}
-.publish .demand {
-  flex: 1;
-  width: 95px;
-  height: 95px;
-  background: url("../../img/publish_btn02@2x.png") no-repeat center;
-  background-size: 95px;
-  position: relative;
-}
-.publish .demand .text {
-  position: absolute;
-  left: 50%;
-  margin-left: -2em;
-  top: 100px;
-}
-.publish .resource {
-  flex: 1;
-  width: 95px;
-  height: 95px;
-  background: url("../../img/publish_btn01@2x.png") no-repeat center;
-  background-size: 95px;
-  position: relative;
-}
-.publish .resource .text {
-  position: absolute;
-  left: 50%;
-  margin-left: -2em;
-  top: 100px;
-}
-.publish_bottom {
-  width: 100%;
-  height: 50px;
-  background-color: #fff;
-  position: fixed;
-  z-index: 5;
-  bottom: 0;
-}
-.publish_close {
-  width: 15px;
-  height: 15px;
-  background: url("../../img/publish_close_icon@2x.png") no-repeat center;
-  background-size: 15px;
-  position: fixed;
-  bottom: 18px;
-  z-index: 10;
-  left: 50%;
-  margin-left: -8px;
 }

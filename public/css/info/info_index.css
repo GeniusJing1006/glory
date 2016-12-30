@@ -14,11 +14,84 @@ body {
   background: url("../../img/nav_back_icon@2x.png") no-repeat center;
   background-size: 25%;
 }
+.header .unlog_back {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../../img/nav_back_icon@2x.png") no-repeat center;
+  background-size: 25%;
+}
 .header .header_title {
   flex: 1;
   padding-right: 50px;
   line-height: 50px;
   text-align: center;
+}
+.publish_cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(29,28,27,0.97);
+  z-index: 200;
+}
+.publish {
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  z-index: 200;
+  bottom: 112px;
+  display: flex;
+  color: #fff;
+}
+.publish .demand {
+  flex: 1;
+  width: 95px;
+  height: 95px;
+  background: url("../../img/publish_btn02@2x.png") no-repeat center;
+  background-size: 95px;
+  position: relative;
+}
+.publish .demand .text {
+  position: absolute;
+  left: 50%;
+  margin-left: -2em;
+  top: 100px;
+}
+.publish .resource {
+  flex: 1;
+  width: 95px;
+  height: 95px;
+  background: url("../../img/publish_btn01@2x.png") no-repeat center;
+  background-size: 95px;
+  position: relative;
+}
+.publish .resource .text {
+  position: absolute;
+  left: 50%;
+  margin-left: -2em;
+  top: 100px;
+}
+.publish_bottom {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+}
+.publish_close {
+  width: 15px;
+  height: 15px;
+  background: url("../../img/publish_close_icon@2x.png") no-repeat center;
+  background-size: 15px;
+  position: fixed;
+  bottom: 18px;
+  z-index: 200;
+  left: 50%;
+  margin-left: -8px;
+}
+.publish_none {
+  display: none;
 }
 * {
   margin: 0;
@@ -41,6 +114,15 @@ body {
         background-size 20px     */
 }
 .header_set .header_img {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 40px;
+  right: 15px;
+  background: url("../../img/nav_set_icon@2x.png") no-repeat top 15px center;
+  background-size: 20px;
+}
+.header_set .header_unlog {
   position: absolute;
   display: block;
   width: 20px;

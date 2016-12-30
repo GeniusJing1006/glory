@@ -14,6 +14,13 @@ body {
   background: url("../../img/nav_back_icon@2x.png") no-repeat center;
   background-size: 25%;
 }
+.header .unlog_back {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../../img/nav_back_icon@2x.png") no-repeat center;
+  background-size: 25%;
+}
 .header .header_title {
   flex: 1;
   padding-right: 50px;
@@ -30,6 +37,9 @@ p {
   background: rgba(0,0,0,0.3);
   position: absolute;
   z-index: 10;
+}
+.cover_edit {
+  display: none;
 }
 .photo-cells {
   z-index: 20;
@@ -59,6 +69,9 @@ p {
   color: #ea5404;
   height: 44px;
   line-height: 44px;
+}
+.photos {
+  display: none;
 }
 .info_box {
   padding: 20px 15px;
@@ -107,6 +120,15 @@ p {
   line-height: 40px;
   border-bottom: 1px solid #e1e1e1;
 }
+.info-cell .finish {
+  color: #ea5404;
+  font-size: 0.7em;
+  z-index: 50;
+  width: 28px;
+}
+.info-cell .finish .finish_none {
+  display: none;
+}
 .info-cell .info-name {
   flex: 2.5;
   font-size: 0.7em;
@@ -117,6 +139,7 @@ p {
   font-size: 0.7em;
   white-space: nowrap;
   overflow: hidden;
+  border: none;
 }
 .info-cell .carrier_finish {
   position: absolute;
@@ -164,12 +187,27 @@ p {
 .image-cell .image-block .title {
   padding: 6px;
 }
+.house_coll {
+  display: none;
+}
 .over-cell {
   display: flex;
   width: 100%;
   background: #fff;
   margin-top: 10px;
   height: 115px;
+  position: relative;
+}
+.over-cell .delete {
+  position: absolute;
+  right: -66px;
+  background-color: #efeff4;
+  color: #ea5404;
+  width: 67px;
+  text-align: center;
+  height: 115px;
+  line-height: 115px;
+  display: none;
 }
 .over-cell .overdue-img {
   flex: 1;
@@ -323,7 +361,7 @@ p {
   background-color: #d6d7dc;
 }
 .collect_banner .active {
-  border-bottom: 1px solid #ea5404;
+  border-bottom: 2px solid #ea5404;
 }
 .demand_cells {
   padding: 15px;
@@ -441,11 +479,16 @@ p {
   border-radius: 25px;
 }
 .setting_cell .setting_img .set_move {
-  width: 31px;
-  height: 31px;
+  width: 30px;
+  height: 30px;
+  top: 1px;
   background-color: #fff;
   position: absolute;
   border-radius: 50%;
+  box-shadow: -1px 1px 5px #888;
+}
+.setting_cell .setting_img .move {
+  right: 0;
 }
 .setting_after {
   position: relative;

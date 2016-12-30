@@ -72,3 +72,25 @@ $resList.find('resource_li').on('click',function(){
     $parent.siblings('res_list').text(text).data('val',val);
     $parent.hide();
 })
+
+//点击文本框，文字消失
+$('.demand_info').on('focus',function(){
+    if(this.value == this.defaultValue) {
+        this.value='';
+        $(this).css('color','#646464');
+    }
+})
+$('.demand_info').on('blur',function(){
+    if(this.value == '') {
+        this.value=this.defaultValue;
+        $(this).css('color','#b4b4b4');
+    }
+})
+//input字体颜色
+$('.demand_input').on('focus',function(){
+    if(this.value == this.defaultValue) {
+        $(this).css('color','#b4b4b4');
+    }
+})
+
+

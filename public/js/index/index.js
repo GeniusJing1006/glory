@@ -1,4 +1,14 @@
-//点击跳转到已登录
+//跳转到预约页面
+$('.bottom-pre').on('tap',function(){
+    location.href = '../order/subscribe.html'
+})
+
+//跳转到信息
+$('.bottom-info').on('tap',function(){
+    location.href = '../msg/msg_info.html'
+})
+
+//跳转到已登录页面
 $('.bottom-me').on('tap',function(){
     location.href = '../info/info_logged.html'
 })
@@ -103,7 +113,7 @@ $('.query_block').on('tap',function(){
     var index = $(this).index();
     if($self.hasClass('active')){
         $self.removeClass('active');
-        $queryBlock.not($self).addClass('active');
+        //$queryBlock.not($self).addClass('active');
         $('.down-box').hide();
         $self.children('.icon').removeClass('icon_active');
         $('.back_top').show();
@@ -292,6 +302,7 @@ $('.city_li').on('tap',function(){
     $('.icon-back').text(val);
 })
 
+
 /**搜索页面 */
 //点击取消，返回主页
 $('.search_del').on('tap',function(){
@@ -301,3 +312,4 @@ $('.search_del').on('tap',function(){
 $('.near_right').on('tap',function(){
     $('.search_cells').remove();
 })
+
