@@ -99,20 +99,34 @@
     padding-top 12px
     line-height 33px
     font-size 14px
+    position relative
     .search_input
-        flex 2.2
+        flex 1.8
         height 33px
-        border-radius 5px
+        border 1px solid #d6d7dc
+        border-radius 0 5px 5px 0
         color #b4b4b4
         background-color #fff
+        border-left 0
+        color #323232
+    .icon-search
+        display inline-block
+        width 30px
+        height 35px
+        background #fff url("../../img/nav_icon_search@2x.png") no-repeat center
+        background-size 16px
+        border-radius 5px 0 0 5px
+        border 1px solid #d6d7dc
+        border-right 0
         margin-left 12px
-        .icon-search
-            display inline-block
-            width 30px
-            height 30px
-            background url("../../img/nav_icon_search@2x.png") no-repeat center
-            background-size 16px
-            vertical-align bottom
+    .search_close
+        width 18px
+        height 35px
+        background url("../../img/content_delet_icon@2x.png") no-repeat center
+        background-size 16px
+        position absolute
+        right 35%
+        display none
     .house_add
         flex 1
         color #323232

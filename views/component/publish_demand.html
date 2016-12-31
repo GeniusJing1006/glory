@@ -10,15 +10,29 @@
         <link rel="stylesheet" href="../public/css/component/component.css">
 	</head>
 	<body>
+        <div class="cover"></div>
 		<header class="header">
             <span class="header_cancle">取消</span>
-            <span class="header_title">发布房源</span>
+            <span class="header_title">发布需求</span>
             <span class="header_sure">发布</span>            
         </header>
         <div class="demand_banner">
             <input type="text" class="demand_input" placeholder=" 呱呱呱叫">    
             <input type="text" class="demand_input" placeholder=" 15295559075">
             <textarea class="demand_info">描述一下您的需求，比如黄埔100-200平方米,5-6元/平方米/天，环境好点，底层，临近地铁。</textarea>
+        </div>
+        <div class="order_out publish_success">
+            <div class="make_msg">需求发布成功，请稍候</div>
+            <div class="order_choose">
+                <div class="order_sure publish_sure">确定</div>
+            </div>
+        </div>
+        <div class="order_out publish_cancle">
+            <div class="make_msg">您确定要退出此次发布？</div>
+            <div class="order_choose">
+                <div class="order_no">取消</div>
+                <div class="order_sure cancle_sure">确认</div>
+            </div>
         </div>
 	</body>
     <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>

@@ -67,6 +67,9 @@
 body {
   background: #efefef;
 }
+article {
+  margin-bottom: 45px;
+}
 .tab_box {
   height: 32px;
   padding: 9px 0;

@@ -28,7 +28,7 @@ $('.notice').on('tap',function(){
     $('.notice_cells').show();
     $('.demand_list').hide();
 })
-$('.demand').on('tap',function(){
+$('.demand_tap').on('tap',function(){
     $('.info_cells').hide();
     $('.notice_cells').hide();
     $('.demand_list').show();

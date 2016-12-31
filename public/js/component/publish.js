@@ -17,3 +17,9 @@ $('.publish_close').on('tap',function(){
 $('.demand').on('tap',function(){
     location.href = '../component/publish_demand.html'
 })
+//发布房源跳转
+$('.resource').on('tap',function(){
+    setTimeout(function(){
+        location.href = '../component/publish.html'
+    },600)
+})
