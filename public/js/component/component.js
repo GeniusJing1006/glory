@@ -155,7 +155,7 @@ $('.icon-back').on('tap',function(){
 $('.demand_push').on('tap',function(){
     if($('.demand_add').val() != ''){
         $('.cover').css('background','#a7a7aa').css('display','block');
-        $('.house_add').css('display','block');
+        $('.house_enter').css('display','block');
     }
 })
 $('.house_sure').on('tap',function(){
