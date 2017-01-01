@@ -313,3 +313,7 @@ $('.near_right').on('tap',function(){
     $('.search_cells').remove();
 })
 
+//详情
+$('.block_box').on('tap',function(){
+    location.href = '../order/building.html'
+})

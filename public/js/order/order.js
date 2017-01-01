@@ -34,9 +34,6 @@ $('.delete').on('tap',function(){
     $(this).parent().remove();
 })
 
-$('.house_img').on('tap',function(){
-    location.href = './building.html'
-})
 
 //点击收藏
 $('.icon_collect').on('tap',function(){
@@ -46,9 +43,9 @@ $('.icon_collect').on('tap',function(){
         $(this).addClass('icon_active')
     }
 })
-//返回预约页面
+//返回首页
 $('.icon-back').on('tap',function(){
-    location.href = './subscribe.html'
+    location.href = '../index/index.html'
 })
 //预约看房
 $('.house_order').on('tap',function(){
@@ -77,3 +74,4 @@ $('.success_back').on('tap',function(){
 $('.success_check').on('tap',function(){
     location.href = '../info/house_order.html'
 })
+
