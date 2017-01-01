@@ -16,7 +16,8 @@ $('.bottom-me').on('tap',function(){
 
 //接单
 $('.btn_receive').on('tap',function(){
-    $(this).css('width','90px').css('background','#fff').css('color','#646464').text('已接单，待反馈').css('text-align','right');
+    //$(this).css('width','90px').css('background','#fff').css('color','#646464').text('已接单，待反馈').css('text-align','right');
+    $(this).addClass('also_house').addClass('house_received').text('已接单，待反馈').removeClass('btn_receive');
 })
 
 //左滑
@@ -75,3 +76,9 @@ $('.success_check').on('tap',function(){
     location.href = '../info/house_order.html'
 })
 
+//查看预约详情
+$('.house_img').on('tap',function(){
+    if($(this).parent().children('.house_info').children('.also_house').hasClass('house_received')){
+        location.href = './order_info.html'
+    }
+})
