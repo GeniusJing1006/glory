@@ -59,27 +59,27 @@
 .slider_block {
   float: left;
   width: 100%;
-  height: 320px;
+  height: 340px;
   background: url("../../img/banner_img@2x.png") no-repeat center;
-  background-size: 100%;
+  background-size: 100% 340px;
 }
 .slider_block:nth-child(2) {
   width: 100%;
-  height: 320px;
+  height: 380px;
   background: url("../../img/banner_img@2x.png") no-repeat center;
-  background-size: 100%;
+  background-size: 100% 340px;
 }
 .slider_block:nth-child(3) {
   width: 100%;
-  height: 320px;
+  height: 380px;
   background: url("../../img/banner_img@2x.png") no-repeat center;
-  background-size: 100%;
+  background-size: 100% 340px;
 }
 .slider_block:nth-child(4) {
   width: 100%;
-  height: 320px;
+  height: 380px;
   background: url("../../img/banner_img@2x.png") no-repeat center;
-  background-size: 100%;
+  background-size: 100% 340px;
 }
 .house_cells {
   width: 100%;
@@ -115,6 +115,8 @@
 .house_cells .house_cell .house_left .left_right {
   flex: 1;
   font-size: 12px;
+  white-space: nowrap;
+  overflow: auto;
 }
 .house_cells .house_cell .house_left .left_right .left_money {
   color: #ea5404;
