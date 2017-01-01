@@ -287,7 +287,7 @@ window.onload = function(){
 }  
 
 /**选择城市 */
-$('.icon-back').on('tap',function(){
+$('.city_back').on('tap',function(){
     location.href = './index_city.html'
 })
 //关闭

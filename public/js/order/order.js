@@ -52,5 +52,28 @@ $('.icon-back').on('tap',function(){
 })
 //预约看房
 $('.house_order').on('tap',function(){
-    location.href = '../info/info_house.html'
+    location.href = '../info/sub_house.html'
+})
+//返回房屋详情
+$('.house_back').on('tap',function(){
+    location.href = '../order/building.html'
+})
+//点击预约看房
+$('.house_edit').on('tap',function(){
+    $('.order_out').css('display','block')
+})
+//预约确定
+$('.sub_sure').on('tap',function(){
+    location.href = '../order/subscribe_success.html'
+})
+$('.sub_no').on('tap',function(){
+    $('.order_out').css('display','none')
+})
+//预约成功
+$('.success_back').on('tap',function(){
+    location.href = '../order/building.html'
+})
+//查看
+$('.success_check').on('tap',function(){
+    location.href = '../info/house_order.html'
 })
