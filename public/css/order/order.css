@@ -7,6 +7,7 @@ body {
   height: 100%;
   background: rgba(0,0,0,0.2);
   z-index: 10;
+  display: none;
 }
 .header {
   display: flex;
@@ -50,6 +51,7 @@ body {
   margin-left: -135px;
   top: 50%;
   margin-top: -100px;
+  display: none;
 }
 .order_out .make_msg {
   height: 64px;
@@ -80,6 +82,62 @@ body {
 }
 .order_out .order_choose .order_sure {
   flex: 1;
+  color: #ea5404;
+}
+.reason_success {
+  width: 270px;
+  height: 109px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 15;
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+  top: 50%;
+  margin-top: -100px;
+  display: none;
+}
+.reason_success .cancle_success {
+  height: 64px;
+  width: 100%;
+  line-height: 64px;
+  text-align: center;
+  border-bottom: 1px solid #d6d7dc;
+  color: #323232;
+  font-size: 14px;
+}
+.reason_success .cancle_sure {
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
+  color: #ea5404;
+}
+.update_out {
+  width: 270px;
+  height: 109px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 15;
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+  top: 50%;
+  margin-top: -100px;
+  display: none;
+}
+.update_out .update_msg {
+  height: 64px;
+  width: 100%;
+  line-height: 64px;
+  text-align: center;
+  border-bottom: 1px solid #d6d7dc;
+  color: #323232;
+  font-size: 14px;
+}
+.update_out .update_ok {
+  text-align: center;
+  height: 44px;
+  line-height: 44px;
   color: #ea5404;
 }
 .publish_cover {
@@ -337,6 +395,15 @@ body {
   border-radius: 5px;
   border: 1px solid #b4b4b4;
 }
+.cancle_reasons div .cancle_reason .other_box {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+  border-radius: 5px;
+  border: 1px solid #b4b4b4;
+}
 .cancle_reasons div .cancle_reason .cancle_text {
   position: absolute;
   top: 0;
@@ -364,6 +431,7 @@ body {
   margin-left: 3px;
   resize: none;
   margin-bottom: 8px;
+  display: none;
 }
 .order_btn {
   width: 350px;
@@ -385,6 +453,7 @@ body {
   line-height: 45px;
   text-align: right;
   background-color: #fff;
+  border: none;
   border-bottom: 1px solid #d6d7dc;
   color: #b4b4b4;
 }

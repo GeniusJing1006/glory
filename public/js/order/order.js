@@ -82,3 +82,101 @@ $('.house_img').on('tap',function(){
         location.href = './order_info.html'
     }
 })
+//接单
+$('.house_img').on('tap',function(){
+    if($(this).parent().children('.house_info').children('.also_house').hasClass('btn_receive')){
+        location.href = './order_sub.html'
+    }
+})
+//电话
+$('.order_tel').on('tap',function(){
+    $('.cover').css('display','block');
+    $('.order_out').css('display','block')
+})
+$('.take_back').on('tap',function(){
+    location.href = './subscribe.html'
+})
+$('.take_no').on('tap',function(){
+    $('.cover').css('display','none');
+    $('.order_out').css('display','none')
+})
+$('.take_sure').on('tap',function(){
+    $('.cover').css('display','none');
+    $('.order_out').css('display','none')
+})
+$('.receive_btn').on('tap',function(){
+    location.href = './order_info.html'
+})
+$('.order_back').on('tap',function(){
+    location.href = './subscribe.html'
+})
+//达成
+$('.reach_upload').on('tap',function(){
+    location.href = './upload.html'
+})
+//上传
+$('.upload_sure').on('tap',function(){
+    $('.cover').css('display','block');
+    $('.upload_success').css('display','block')
+})
+$('.upload_yes').on('tap',function(){
+    location.href = './order_info.html'
+})
+$('.upload_cancle').on('tap',function(){
+    $('.cover').css('display','block');
+    $('.upload_no').css('display','block')
+})
+$('.sure_cancle').on('tap',function(){
+    $('.cover').css('display','none');
+    $('.upload_no').css('display','none')
+})
+$('.sure_sure').on('tap',function(){
+    location.href = './order_info.html'
+})
+$('.order_cancle').on('tap',function(){
+    location.href = './order_cancle.html'
+})
+//其他原因
+$('.order_box').on('tap',function(){
+    if(!$(this).hasClass('order_active')){
+        $(this).addClass('order_active');
+    }else{
+        $(this).removeClass('order_active');
+    }
+})
+$('.other_box').on('tap',function(){
+    if(!$(this).hasClass('order_active')){
+        $(this).addClass('order_active');
+        $('.cancle_input').css('display','block')
+    }else{
+        $(this).removeClass('order_active');
+        $('.cancle_input').css('display','none')
+    }
+})
+$('.reason_back').on('tap',function(){
+    location.href = './order_info.html'
+})
+//确定取消
+$('.reason_sure').on('tap',function(){
+    $('.cover').css('display','block');
+    $('.reason_success').css('display','block')
+})
+$('.reason_ok').on('tap',function(){
+    location.href = './subscribe.html'
+})
+//预约改期
+$('.update_time').on('tap',function(){
+    location.href = './order_update.html'
+})
+//取消
+$('.update_cancle').on('tap',function(){
+    location.href = './order_info.html'
+})
+//确定
+$('.update_sure').on('tap',function(){
+    $('.cover').css('display','block');
+    $('.update_out').css('display','block');
+})
+$('.update_ok').on('tap',function(){
+    location.href = './order_info.html'
+})

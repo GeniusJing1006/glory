@@ -15,8 +15,9 @@
         <link rel="stylesheet" href="../public/css/order/order.css">
 	</head>
 	<body>
+        <div class="cover"></div>
 		<header class="header">
-            <i class="icon-back"></i>
+            <i class="icon-back order_back"></i>
             <span class="header_title">订单详情</span>
         </header>
         <div class="order_label"><span>预约人</span></div>
@@ -57,13 +58,19 @@
             </div>
         </div>
         <div class="order_footer">
-            <div class="order_line">改期</div>
-            <div class="order_line">达成</div>
-            <div class="order_line">取消</div>
+            <div class="order_line update_time">改期</div>
+            <div class="order_line reach_upload">达成</div>
+            <div class="order_line order_cancle">取消</div>
+        </div>
+        <div class="order_out">
+            <div class="make_msg">您确定要拨打电话么？</div>
+            <div class="order_choose">
+                <div class="order_no take_no">取消</div>
+                <div class="order_sure take_sure">确认</div>
+            </div>
         </div>
 	</body>
     <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
     <script src="../public/libs/zepto/touch.js"></script>
     <script src="../public/js/order/order.js"></script>
-    <script src="../public/js/component/publish.js"></script>
 </html>
