@@ -21,6 +21,9 @@ $(window).on('keyup',function(){
         $('#btn_login').on('tap',function(){
             location.href = './developer.html'
         }).css('background','#ea5404');
+        $('#btn_forget').on('tap',function(){
+            location.href = './login.html'
+        }).css('background','#ea5404');
     }
 })
 
