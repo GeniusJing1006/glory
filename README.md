@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 * 下载
     ``` 
-     git clone https://code.aliyun.com/task2016/module.git
+     git clone https://github.com/GeniusJing1006/glory.git
     ```
 * 进入目录
     ``` 
