@@ -314,6 +314,6 @@ $('.near_right').on('tap',function(){
 })
 
 //详情
-$('.block_box').on('tap',function(){
+$('.img_box').on('tap',function(){
     location.href = '../order/building.html'
 })
